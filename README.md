@@ -9,7 +9,7 @@
 
 [![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)
 
-## 😙这是一个可以让你的VirtualDJ使用网易云在线源曲库的插件
+## 😙这是一个可以让你的VirtualDJ使用网易云曲库的插件
 ## 由插件本体和控制面板组成 高度集成于VirtualDJ
 ## 插件本体为C++编写 控制面板为Python编写 GUI库为Pyside6
 ## 使用本项目时请务必遵守相关法律法规，尊重网易云音乐的服务条款
