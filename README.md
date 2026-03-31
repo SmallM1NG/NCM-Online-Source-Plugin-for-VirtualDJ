@@ -1,9 +1,8 @@
-
-
 # 😙这是一个可以让你的VirtualDJ使用网易云在线源曲库的插件
-
 #### 😍 是的宝宝 VDJ王朝了 (
+
 -----
+
 # ℹ️项目简介 
  * **开发者**：小小小小铭 Aka DJM1NG
  * **开源协议**：[GPLv3 ](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/LICENSE "GPLv3 ")
@@ -14,7 +13,7 @@
 
 -----
 
-#🤔如何使用
+# 🤔如何使用
 ### 转到[Releases](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/releases "Releases")下载最新发行包即可
 ### 下载后 完全解压压缩包 至同一目录
 ### 运行控制面板 (Control Panel)
@@ -23,7 +22,7 @@
 
 -----
 
-#🔗补充链接
+# 🔗补充链接
 #### VirtualDJ官网 
 ####[https://cn.virtualdj.com/](https://cn.virtualdj.com/ "VirtualDJ")
 #### VirtualDJ开发者资料
