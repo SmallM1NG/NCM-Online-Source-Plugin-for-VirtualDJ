@@ -10,6 +10,7 @@
   * **推荐环境**：VirtualDJ 2025版（需拥有 **Pro** 许可证）。
   * **相关链接**：[GitHub 仓库](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ) | [Bilibili 主页](https://space.bilibili.com/475951038)
 
+[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)
 -----
 
 ## ⚠️ 步骤 0：安全备份 (Step 0)
@@ -20,6 +21,7 @@
   * **系统盘 (C盘)**：`C:\Users\用户名\AppData\Local\VirtualDJ`
   * **非系统盘**：对应盘符根目录下的 `\VirtualDJ` 文件夹（例如 `D:\VirtualDJ`）。
 
+[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/2.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/2.png)
 -----
 
 ## 🚀 步骤 1：启动服务 (Step 1)
@@ -29,6 +31,7 @@
 3.  点击顶部按钮 **“启用服务”**，等待状态显示为 **“运行中”**。
 4.  可点击界面上的服务地址（如 `http://localhost:3000`）验证是否成功启动。
 
+[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/3.png)](http://https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/3.png)
 -----
 
 ## 🔑 步骤 2：账号登录 (Step 2)
@@ -38,6 +41,7 @@
       * **手机号登录**：输入手机号及验证码。
 2.  授权成功后，若界面能够加载出您的头像和用户信息，即代表登录成功。
 
+[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/4.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/4.png)
 -----
 
 ## ⚙️ 步骤 3：生成配置 (Step 3)
@@ -48,6 +52,7 @@
 2.  点击 **插件偏好设置**，根据需求调整音质、下载路径等，点击 **生成当前配置并保存**。
 3.  上述文件将自动保存在程序目录下的 `\export` 文件夹内。
 
+[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/5.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/5.png)
 -----
 
 ## 💾 步骤 4：安装插件 (Step 4)
@@ -57,6 +62,7 @@
 3.  定位到目录：`\Plugins64\OnlineSources`。
 4.  将 `\export` 文件夹内的 **3个 .txt 文件** 以及解压包里的 **NeteaseCloudMusic.dll** 复制到该目录下。
 
+[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/6.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/6.png)
 -----
 
 ## 🎚️ 步骤 5：启用插件 (Step 5)
@@ -70,6 +76,7 @@
 
   * *提示：右键点击该目录可查看版本、日志及配置文件。*
 
+[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/7.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/7.png)
 -----
 
 ## 🔍 步骤 6：搜索与下载 (Step 6)
@@ -78,8 +85,6 @@
 2.  **检索曲目**：选中 NeteaseCloudMusic 目录后，直接在搜索框键入关键词即可在线检索。
 3.  **下载功能**：确保在偏好设置中启用了 **下载功能** 并设置了有效路径。右键点击歌单内的曲目，选择 **下载此歌曲** 即可。
 
+[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/8.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/8.png)
 -----
 
-### ❓ 常见问题 (FAQ)
-
-如果遇到服务无法启动或插件不显示，请查阅控制面板中的 **FAQ** 按钮。
