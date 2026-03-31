@@ -1,7 +1,0 @@
-<Solution>
-  <Configurations>
-    <Platform Name="x64" />
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="NeteaseCloudMusic/NeteaseCloudMusic.vcxproj" Id="1e33db04-71b4-4e98-8247-e56a5e86a310" />
-</Solution>
