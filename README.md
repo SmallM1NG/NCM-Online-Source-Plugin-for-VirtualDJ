@@ -3,7 +3,6 @@
 # 😙这是一个可以让你的VirtualDJ使用网易云在线源曲库的插件
 
 #### 😍 是的宝宝 VDJ王朝了 (
-
 -----
 # ℹ️项目简介 
  * **开发者**：小小小小铭 Aka DJM1NG
@@ -11,7 +10,7 @@
  * **最后更新**：20260331
 ### 插件API服务使用 
 #### [NeteaseCloudMusicAPI Enhanced](https://github.com/neteasecloudmusicapienhanced/api-enhanced "NeteaseCloudMusicAPI Enhanced")
-####非常感谢此项目贡献者们
+#### 非常感谢此项目贡献者们
 
 -----
 
