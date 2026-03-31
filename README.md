@@ -18,9 +18,9 @@
 * **下载可自动添加Tag信息**
 * **可在VDJ中直接搜索曲目播放**
 
-### 插件API服务使用 
-#### [NeteaseCloudMusicAPI Enhanced](https://github.com/neteasecloudmusicapienhanced/api-enhanced "NeteaseCloudMusicAPI Enhanced")
-#### 非常感谢此项目贡献者们
+## 插件API服务使用 
+### [NeteaseCloudMusicAPI Enhanced](https://github.com/neteasecloudmusicapienhanced/api-enhanced "NeteaseCloudMusicAPI Enhanced")
+### 非常感谢此项目贡献者们
 
 -----
 
@@ -35,11 +35,11 @@
 
 # 🔗补充链接
 #### VirtualDJ官网 
-####[https://cn.virtualdj.com/](https://cn.virtualdj.com/ "VirtualDJ")
+#### [https://cn.virtualdj.com/](https://cn.virtualdj.com/ "VirtualDJ")
 #### VirtualDJ开发者资料
-####[https://cn.virtualdj.com/wiki/Developers.html](https://cn.virtualdj.com/wiki/Developers.html "https://cn.virtualdj.com/wiki/Developers.html")
+#### [https://cn.virtualdj.com/wiki/Developers.html](https://cn.virtualdj.com/wiki/Developers.html "https://cn.virtualdj.com/wiki/Developers.html")
 #### Bilibili个人主页 
-####[https://space.bilibili.com/475951038](https://space.bilibili.com/475951038)
+#### [https://space.bilibili.com/475951038](https://space.bilibili.com/475951038)
 
 -----
 
