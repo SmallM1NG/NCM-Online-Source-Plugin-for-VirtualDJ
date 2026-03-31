@@ -5,6 +5,8 @@
  * **开源协议**：[GPLv3 ](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/LICENSE "GPLv3 ")
  * **最后更新**：20260331
 
+[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)
+
 ## 😙这是一个可以让你的VirtualDJ使用网易云在线源曲库的插件
 ## 由插件本体和控制面板组成 高度集成与VirtualDJ
 ## 插件本体为C++编写 控制面板为Python编写 GUI库为Pyside6
