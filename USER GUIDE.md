@@ -6,7 +6,7 @@
   * **开发者**：小小小小铭 Aka DJM1NG
   * **开源协议**：GPLv3
   * **版本**：260331 v0.1
-  * **兼容环境**：Windows x66 VirtualDJ 2025版（需拥有 **Pro** 许可证）。
+  * **兼容环境**：Windows x64 VirtualDJ 建议2025版及以上（需拥有 **Pro** 许可证）。
   * **相关链接**：[GitHub 仓库](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ) | [Bilibili 主页](https://space.bilibili.com/475951038)
 
 [![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)
