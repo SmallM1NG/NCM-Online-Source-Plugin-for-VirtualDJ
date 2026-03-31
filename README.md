@@ -1,86 +1,42 @@
 
-# 🎵 控制面板使用教程
 
-## ℹ️ Info
+# 😙这是一个可以让你的VirtualDJ使用网易云在线源曲库的插件
 
-  * **开发者**：小小小小铭 Aka DJM1NG
-  * **开源协议**：GPLv3
-  * **构建日期**：20260331
-  * **兼容性**：仅兼容 **Windows x64**。
-  * **推荐环境**：VirtualDJ 2025版（需拥有 **Pro** 许可证）。
-  * **相关链接**：[GitHub 仓库](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ) | [Bilibili 主页](https://space.bilibili.com/475951038)
+#### 😍 是的宝宝 VDJ王朝了 (
+
+-----
+# ℹ️项目简介 
+ * **开发者**：小小小小铭 Aka DJM1NG
+ * **开源协议**：[GPLv3 ](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/LICENSE "GPLv3 ")
+ * **最后更新**：20260331
+### 插件API服务使用 
+#### [NeteaseCloudMusicAPI Enhanced](https://github.com/neteasecloudmusicapienhanced/api-enhanced "NeteaseCloudMusicAPI Enhanced")
+####非常感谢此项目贡献者们
 
 -----
 
-## ⚠️ 步骤 0：安全备份 (Step 0)
-
-**虽然此步骤可忽略，但强烈建议您备份您的数据库文件！**
-通常 VirtualDJ 的曲目数据位于：
-
-  * **系统盘 (C盘)**：`C:\Users\用户名\AppData\Local\VirtualDJ`
-  * **非系统盘**：对应盘符根目录下的 `\VirtualDJ` 文件夹（例如 `D:\VirtualDJ`）。
-[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)
+#🤔如何使用
+### 转到[Releases](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/releases "Releases")下载最新发行包即可
+### 下载后 完全解压压缩包 至同一目录
+### 运行控制面板 (Control Panel)
+### 控制面板中内置了使用教程
+### 当然也可点击 [使用教程](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/USER%20GUIDE.md "使用教程") [FAQ](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/FAQ.md "FAQ") 查看
 
 -----
 
-## 🚀 步骤 1：启动服务 (Step 1)
-
-1.  完全解压压缩包内的内容到同一个文件夹下。
-2.  双击运行 **Control Panel**（控制面板）。
-3.  点击顶部按钮 **“启用服务”**，等待状态显示为 **“运行中”**。
-4.  可点击界面上的服务地址（如 `http://localhost:3000`）验证是否成功启动。
-
------
-
-## 🔑 步骤 2：账号登录 (Step 2)
-
-1.  在登录界面选择登录方式：
-      * **二维码登录**：使用网易云音乐手机 App 扫码。
-      * **手机号登录**：输入手机号及验证码。
-2.  授权成功后，若界面能够加载出您的头像和用户信息，即代表登录成功。
+#🔗补充链接
+#### VirtualDJ官网 
+####[https://cn.virtualdj.com/](https://cn.virtualdj.com/ "VirtualDJ")
+#### VirtualDJ开发者资料
+####[https://cn.virtualdj.com/wiki/Developers.html](https://cn.virtualdj.com/wiki/Developers.html "https://cn.virtualdj.com/wiki/Developers.html")
+#### Bilibili个人主页 
+####[https://space.bilibili.com/475951038](https://space.bilibili.com/475951038)
 
 -----
 
-## ⚙️ 步骤 3：生成配置 (Step 3)
-
-1.  在控制面板依次点击：
-      * **生成 Cookie**
-      * **生成 UserData**
-2.  点击 **插件偏好设置**，根据需求调整音质、下载路径等，点击 **生成当前配置并保存**。
-3.  上述文件将自动保存在程序目录下的 `\export` 文件夹内。
+# 😨汇报Bug
+####请在 GitHub 提交issues 或 B 站私信我。
 
 -----
-
-## 💾 步骤 4：安装插件 (Step 4)
-
-1.  启动 **VirtualDJ**。
-2.  进入设置界面，点击 **右下角小齿轮** 图标打开 VirtualDJ 主目录。
-3.  定位到目录：`\Plugins64\OnlineSources`。
-4.  将 `\export` 文件夹内的 **3个 .txt 文件** 以及解压包里的 **NeteaseCloudMusic.dll** 复制到该目录下。
-
------
-
-## 🎚️ 步骤 5：启用插件 (Step 5)
-
-1.  重启 VirtualDJ。
-2.  在浏览窗左侧找到 **网络曲库 (Online Sources)** 分类。
-3.  点击展开，找到 **NeteaseCloudMusic** 目录并点击即可启用。
-4.  所有的歌单将以子文件夹形式展示，您可以直接将曲目拖入 Deck 播放。
-
-<!-- end list -->
-
-  * *提示：右键点击该目录可查看版本、日志及配置文件。*
-
------
-
-## 🔍 步骤 6：搜索与下载 (Step 6)
-
-1.  **开启搜索**：点击浏览窗搜索框旁的小齿轮，启用网络曲库搜索，并确保源已勾选 **NeteaseCloudMusic**。
-2.  **检索曲目**：选中 NeteaseCloudMusic 目录后，直接在搜索框键入关键词即可在线检索。
-3.  **下载功能**：确保在偏好设置中启用了 **下载功能** 并设置了有效路径。右键点击歌单内的曲目，选择 **下载此歌曲** 即可。
-
------
-
-### ❓ 常见问题 (FAQ)
-
-如果遇到服务无法启动或插件不显示，请查阅控制面板中的 **FAQ** 按钮。
+# 🥰请我喝奶茶
+[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/qrcode.jpg)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/qrcode.jpg)
