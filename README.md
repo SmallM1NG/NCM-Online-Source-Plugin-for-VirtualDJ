@@ -5,12 +5,12 @@
  * **我知道他很长 所以简称 NCM OSP (NCM在线源插件)**
  * **开发者**：小小小小铭 Aka DJM1NG
  * **开源协议**：[GPLv3 ](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/LICENSE "GPLv3 ")
- * **最后更新**：20260331
+ * **版本**：260331 v0.1
 
 [![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)
 
 ## 😙这是一个可以让你的VirtualDJ使用网易云在线源曲库的插件
-## 由插件本体和控制面板组成 高度集成与VirtualDJ
+## 由插件本体和控制面板组成 高度集成于VirtualDJ
 ## 插件本体为C++编写 控制面板为Python编写 GUI库为Pyside6
 
 
