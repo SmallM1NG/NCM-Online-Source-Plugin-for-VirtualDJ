@@ -16,12 +16,13 @@
 
 
 ### 目前功能实现
-* **展示用户网易云歌单**
+* **展示用户日推 喜欢 歌单 播客歌单**
 * **在线播放网易云曲目**
 * **可选FLAC/MP3音质**
 * **可下载曲目至本地**
 * **下载可自动添加Tag信息**
 * **可在VDJ中直接搜索曲目播放**
+* **可通过控制面板或直接编辑settings.txt以个性化配置**
 
 ## 网易云API服务使用 
 ### [NeteaseCloudMusicAPI Enhanced](https://github.com/neteasecloudmusicapienhanced/api-enhanced "NeteaseCloudMusicAPI Enhanced")
