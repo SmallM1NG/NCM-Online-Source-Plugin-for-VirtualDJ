@@ -1,12 +1,7 @@
-这是一份根据你代码逻辑整理的 **Markdown 版本的插件使用教程**。
 
-由于 Markdown 无法像你的 Python 代码那样动态监测 `app.exe` 的运行状态，我将步骤进行了文档化处理，并按照你的代码顺序（Info + Step 0-6）进行了排版。
+# 🎵 控制面板使用教程
 
------
-
-# 🎵 NCM Online Source Plugin for VirtualDJ 使用教程
-
-## ℹ️ 插件信息 (Info)
+## ℹ️ Info
 
   * **开发者**：小小小小铭 Aka DJM1NG
   * **开源协议**：GPLv3
@@ -24,6 +19,7 @@
 
   * **系统盘 (C盘)**：`C:\Users\用户名\AppData\Local\VirtualDJ`
   * **非系统盘**：对应盘符根目录下的 `\VirtualDJ` 文件夹（例如 `D:\VirtualDJ`）。
+[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)
 
 -----
 
