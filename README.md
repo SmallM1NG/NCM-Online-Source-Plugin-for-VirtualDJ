@@ -23,7 +23,7 @@
 * **下载可自动添加Tag信息**
 * **可在VDJ中直接搜索曲目播放**
 
-## 插件API服务使用 
+## 网易云API服务使用 
 ### [NeteaseCloudMusicAPI Enhanced](https://github.com/neteasecloudmusicapienhanced/api-enhanced "NeteaseCloudMusicAPI Enhanced")
 ### 非常感谢此项目贡献者们
 
