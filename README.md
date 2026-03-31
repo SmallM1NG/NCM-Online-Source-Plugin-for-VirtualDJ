@@ -1,12 +1,23 @@
-# 😙这是一个可以让你的VirtualDJ使用网易云在线源曲库的插件
-#### 😍 是的宝宝 VDJ王朝了 (
-
------
+#😍 是的宝宝 VDJ王朝了 (
 
 # ℹ️项目简介 
  * **开发者**：小小小小铭 Aka DJM1NG
  * **开源协议**：[GPLv3 ](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/LICENSE "GPLv3 ")
  * **最后更新**：20260331
+
+## 😙这是一个可以让你的VirtualDJ使用网易云在线源曲库的插件
+## 由插件本体和控制面板组成 高度集成与VirtualDJ
+## 插件本体为C++编写 控制面板为Python编写 GUI库为Pyside6
+
+
+### 目前功能实现
+* **展示用户网易云歌单**
+* **在线播放网易云曲目**
+* **可选FLAC/MP3音质**
+* **可下载曲目至本地**
+* **下载可自动添加Tag信息**
+* **可在VDJ中直接搜索曲目播放**
+
 ### 插件API服务使用 
 #### [NeteaseCloudMusicAPI Enhanced](https://github.com/neteasecloudmusicapienhanced/api-enhanced "NeteaseCloudMusicAPI Enhanced")
 #### 非常感谢此项目贡献者们
@@ -33,7 +44,7 @@
 -----
 
 # 😨汇报Bug
-####请在 GitHub 提交issues 或 B 站私信我。
+####请在 GitHub 提交 issues 或 B站私信我。
 
 -----
 # 🥰请我喝奶茶
