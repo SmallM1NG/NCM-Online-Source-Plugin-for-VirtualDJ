@@ -38,13 +38,13 @@
 #### [https://cn.virtualdj.com/](https://cn.virtualdj.com/ "VirtualDJ")
 #### VirtualDJ开发者资料
 #### [https://cn.virtualdj.com/wiki/Developers.html](https://cn.virtualdj.com/wiki/Developers.html "https://cn.virtualdj.com/wiki/Developers.html")
-#### Bilibili个人主页 
+#### BiliBili个人主页 
 #### [https://space.bilibili.com/475951038](https://space.bilibili.com/475951038)
 
 -----
 
 # 😨汇报Bug
-####请在 GitHub 提交 issues 或 B站私信我。
+#### 请在 GitHub 提交 issues 或 B站私信我。
 
 -----
 # 🥰请我喝奶茶
