@@ -65,7 +65,7 @@
 2. 在左侧浏览窗找到 **网络曲库 (Online Sources)** 分类点击展开。
 3. 找到 **NeteaseCloudMusic** 目录并点击，即可加载歌单数据。
 
-[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/7.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/6.png)
+[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/6.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/6.png)
 
 ---
 
@@ -76,4 +76,4 @@
 * 下载操作不会弹出提示，请前往预设的下载路径查看文件。
 * 下载后的文件会自动根据偏好设置项写入 Tag 信息。
 
-[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/8.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/7.png)
+[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/7.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/7.png)
