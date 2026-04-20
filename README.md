@@ -5,7 +5,7 @@
  * **我知道他很长 所以简称 NCM OSP (NCM在线源插件)**
  * **开发者**：小小小小铭 Aka DJM1NG
  * **开源协议**：[GPLv3 ](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/LICENSE "GPLv3 ")
- * **版本**：260331 v0.1
+ * **版本**：260420 v0.2
 
 [![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)
 
