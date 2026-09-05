@@ -86,8 +86,7 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 ### 设置面板
 
 <div align="center">
-	<img width="496" src="docs/imgs/settings.png" alt="设置面板">
-	<img width="496" src="docs/imgs/settings.webp" alt="设置面板操作">
+	<img width="1024" src="docs/imgs/settings.webp" alt="设置面板">
 </div>
 
 <a id="如何安装"></a>
