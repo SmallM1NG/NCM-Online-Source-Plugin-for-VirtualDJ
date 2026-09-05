@@ -56,38 +56,38 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 ### 在线播放音频 / 视频
 
 <div align="center">
-	<img width="80%" src="docs/imgs/play.webp" alt="在线播放音频 / 视频">
+	<img width="1024" src="docs/imgs/play.webp" alt="在线播放音频 / 视频">
 </div>
 
 ### 歌单以列表展示
 
 <div align="center">
-	<img width="80%" src="docs/imgs/playlists.webp" alt="歌单以列表展示">
+	<img width="1024" src="docs/imgs/playlists.webp" alt="歌单以列表展示">
 </div>
 
 ### 手动搜索
 
 <div align="center">
-	<img width="80%" src="docs/imgs/search.webp" alt="手动搜索">
+	<img width="1024" src="docs/imgs/search.webp" alt="手动搜索">
 </div>
 
 ### AI 推荐等功能调用
 
 <div align="center">
-	<img width="80%" src="docs/imgs/ai-recommend.webp" alt="AI 推荐等功能调用">
+	<img width="1024" src="docs/imgs/ai-recommend.webp" alt="AI 推荐等功能调用">
 </div>
 
 ### 下载音频 / 视频
 
 <div align="center">
-	<img width="80%" src="docs/imgs/download.webp" alt="下载音频 / 视频">
+	<img width="1024" src="docs/imgs/download.webp" alt="下载音频 / 视频">
 </div>
 
 ### 设置面板
 
 <div align="center">
-	<img width="48%" src="docs/imgs/settings.png" alt="设置面板">
-	<img width="48%" src="docs/imgs/settings.webp" alt="设置面板操作">
+	<img width="496" src="docs/imgs/settings.png" alt="设置面板">
+	<img width="496" src="docs/imgs/settings.webp" alt="设置面板操作">
 </div>
 
 <a id="如何安装"></a>
