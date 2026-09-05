@@ -26,6 +26,7 @@ x64/
 
 # Bundled API binary (too large for git; ship with Releases)
 **/ncm_api_server.exe
+!API Server/api-enhanced/precompiled/ncm_api_server.exe
 
 # Local plugin runtime files
 settings.json

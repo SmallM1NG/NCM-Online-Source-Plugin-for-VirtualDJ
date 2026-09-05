@@ -1,0 +1,874 @@
+--------------------------------------------------------------------------------
+'@$4decks20' 0		  		-> 2 Deck Skin
+'@$4decks20' 1		  		-> 4 Deck Skin
+--------------------------------------------------------------------------------
+'@$deck20' 0				-> 4 Deck Skin (used only in 4 Deck Skin)
+'@$deck20' 1				-> 2 Deck Skin - swap (used only in 4 Deck Skin)
+--------------------------------------------------------------------------------
+'@$day20' 0			 		-> light grey color sheme
+'@$day20' 1			 		-> white color sheme
+'@$day20' 2			 		-> dark grey color sheme
+'@$day20' 3			 		-> black color sheme
+'@$day20' 4			 		-> light grey 2 color sheme
+'@$day20' 5			 		-> dark grey 2 color sheme
+--------------------------------------------------------------------------------
+'@$colormode20' 0			-> Deck 1 blue, Deck 2 red, Deck 3 green, Deck 4 yellow
+'@$colormode20' 1			-> Deck 1 blue, Deck 2 yellow, Deck 3 green, Deck 4 red
+'@$colormode20' 2			-> all Decks blue
+'@$colormode20' 3			-> all Decks yellow
+'@$colormode20' 4			-> all Decks blue-grey
+--------------------------------------------------------------------------------
+'@$text+20' 0				-> normal font size
+'@$text+20' 1				-> bigger font size
+'@$text+20' 2				-> extra-big font size
+--------------------------------------------------------------------------------
+'@$power20' 0				-> blink when notebook on battery
+'@$power20' 1				-> deactivate blink when notebook on battery
+--------------------------------------------------------------------------------
+'@$counter20' 0				-> show the license and the VDJ Version on the top
+'@$counter20' 1				-> show the counter on the top
+--------------------------------------------------------------------------------
+'@$deckbordersel20' 0		-> hide the border
+'@$deckbordersel20' 1		-> show the border Select Deck
+'@$deckbordersel20' 2		-> show the border Master Deck
+'@$deckbordersel20' 3		-> show the border left/right Deck	 
+'@$deckbordersel20' 4		-> show the border Song end blink
+--------------------------------------------------------------------------------
+'@$variation20' 0			-> BIG layout
+'@$variation20' 1			-> MIDDLE layout
+'@$variation20' 2			-> SMALL layout
+'@$variation20' 3			-> two BIG + 2 SMALL layout swap (only 4 Deck)
+'@$variation20' 4			-> two MIDDLE + 2 SMALL layout swap (only 4 Deck)
+'@$variation20' 5			-> BIG EXTRA layout (only 2 Deck)
+'@$variation20' 6			-> MIDDLE EXTRA layout (only 2 Deck)
+'@$variation20' 7			-> BIG - split layout (only 4 Deck)
+'@$variation20' 8			-> two BIG + 2 SMALL layout swap move (only 4 Deck)
+'@$variation20' 9			-> two MIDDLE + 2 SMALL layout swap move (only 4 Deck)
+'@$variation20' 10			-> 4 Deck vertical (only 4 Deck)
+'@$variation20' 11			-> 4 Deck vertical small (only 4 Deck)
+'@$variation20' 12			-> 2 Deck simple Video (only 2 Deck)
+'@$variation20' 13			-> 2 Deck prepare (only 2 Deck)
+'@$variation20' 14			-> 1 Deck prepare (only 2 Deck)
+'@$variation20' 15			-> simple Audio
+'@$variation20' 16			-> 4 Deck vertical small special (only 4 Deck)
+--------------------------------------------------------------------------------
+'@$mixer20' 0				-> Audio Mixer
+'@$mixer20' 1				-> Video Mixer
+'@$mixer20' 2				-> Scratch Mixer
+'@$mixer20' 3				-> Master Mixer
+--------------------------------------------------------------------------------
+'@$showcenter20' 0			-> show the Mixer Area
+'@$showcenter20' 1			-> hide the Mixer Area
+--------------------------------------------------------------------------------
+'@$crossfx20' 0				-> show crossfader settings
+'@$crossfx20' 1				-> show MIX FX
+--------------------------------------------------------------------------------
+'@$platter20' 0				-> dark jog
+'@$platter20' 1				-> white jog
+'@$platter20' 2				-> white/dark auto jog
+--------------------------------------------------------------------------------
+'@$plattersave20' 0			-> save setting dark layout when change to white skin layout
+'@$plattersave20' 1			-> save setting white layout when change to white skin layout
+--------------------------------------------------------------------------------
+'@$time20' 0				-> show spend/elaps time on jog
+'@$time20' 1				-> show only elaps time on jog
+--------------------------------------------------------------------------------
+'@$scratch20' 0				-> disable the scatch funktion on jog
+'@$scratch20' 1				-> enable the scatch funktion on jog
+--------------------------------------------------------------------------------
+'@$padcolor20' 0			-> show the pad color
+'@$padcolor20' 1			-> hide the pad color
+--------------------------------------------------------------------------------
+'@$cuecustom20' 0			-> show 4 cue's and custom buttons and knobs
+'@$cuecustom20' 1			-> show 8 cue's
+'@$cuecustom20' 2			-> show only custom buttons
+'@$cuecustom20' 3			-> show 4 cue's and custom buttons (no knobs)
+--------------------------------------------------------------------------------
+'@$cover20' 0				-> show the Song cover picture
+'@$cover20' 1				-> hide the Song cover picture
+--------------------------------------------------------------------------------
+'@$tapunload20' 0			-> show the beat tap button
+'@$tapunload20' 0			-> show the unload button
+--------------------------------------------------------------------------------
+'@$comment20' 0				-> show pitch in the songinfos
+'@$comment20' 1				-> show tag comments in the songinfos
+'@$comment20' 2				-> show Rate Stars in the songinfos
+--------------------------------------------------------------------------------
+'@$songposline20' 0			-> hide a bigger line of the songpositon position
+'@$songposline20' 1			-> show a bigger line of the songpositon position
+--------------------------------------------------------------------------------
+'@$cuenumber20' 0			-> show the cue numbers in the songpositon wave
+'@$cuenumber20' 1			-> hide the cue numbers in the songpositon wave
+--------------------------------------------------------------------------------
+'@$cueline20' 0				-> show a transparent line in the backgound of the cue numbers
+'@$cueline20' 1				-> hide the transparent line in the backgound of the cue numbers
+--------------------------------------------------------------------------------
+'@$browserarea20' 0			-> show the Browser
+'@$browserarea20' 1			-> hide the Browser
+--------------------------------------------------------------------------------
+'@$prelisten20' 0			-> hide the prelisten player in the bottom of the Browser
+'@$prelisten20' 1			-> show the prelisten player in the bottom of the Browser
+--------------------------------------------------------------------------------
+'@$wavebackground20' 0		-> show a dark grey background of the main wave
+'@$wavebackground20' 1		-> show a light grey background of the main wave
+'@$wavebackground20' 2		-> show a black background of the main wave
+--------------------------------------------------------------------------------
+'@$wavetype20' 0			-> main scratch Wave 
+'@$wavetype20' 1			-> main Classic Wave
+'@$wavetype20' 2			-> main Classic Wave Overlayed
+--------------------------------------------------------------------------------
+'@$wavevariation20' 0		-> main wave bottom separate
+'@$wavevariation20' 1		-> main wave bottom 1 line
+'@$wavevariation20' 2		-> main wave top separate
+'@$wavevariation20' 3		-> main wave top 1 line
+'@$wavevariation20' 4		-> hide main wave
+--------------------------------------------------------------------------------
+'@$wavesize20' 0			-> main wave small height
+'@$wavesize20' 1			-> main wave middle height
+'@$wavesize20' 2			-> main wave large height
+'@$wavesize20' 3			-> main wave extra large height
+'@$wavesize20' 4			-> main wave extra small height
+--------------------------------------------------------------------------------
+'@$wavesort20' 0			-> main wave sort Deck 3124
+'@$wavesort20' 1			-> main wave sort Deck 1234
+'@$wavesort20' 2			-> main wave sort Deck 1342
+--------------------------------------------------------------------------------
+'@$wavebar20' 0				-> hide the Overlay on Scratchwave
+'@$wavebar20' 1				-> show the bar counter on Scratchwave
+'@$wavebar20' 2				-> show the beat counter on Scratchwave
+'@$wavebar20' 3				-> show loop legth on Scratchwave
+'@$wavebar20' 4				-> show Volume Fader % on Scratchwave
+'@$wavebar20' 5				-> show Deck Number
+'@$wavebar20' 6				-> time left
+'@$wavebar20' 7				-> time remain
+--------------------------------------------------------------------------------
+'@$custombar20' 0			-> hide the custom buttons over the browser  
+'@$custombar20' 1			-> show the custom buttons over the browser
+--------------------------------------------------------------------------------
+'@$customrow20' 0			-> show 4 knobs & 20 buttons on the custom button bar
+'@$customrow20' 1			-> show 4 knobs & 40 buttons on the custom button bar
+'@$customrow20' 2			-> show 23 buttons on the custom button bar
+'@$customrow20' 3			-> show 46 custom buttons on the custom button bar
+--------------------------------------------------------------------------------
+'@$cuepad20' 0				-> cue/custom on the top, pad on the bottom
+'@$cuepad20' 1				-> cue/custom on the bottom, pad on the top
+--------------------------------------------------------------------------------
+'@$songposfull20' 0			-> show the songposition wave mirrord
+'@$songposfull20' 1			-> show the songposition wave half height
+'@$songposfull20' 2			-> auto toggle half when CUE
+--------------------------------------------------------------------------------
+'@$joglogo20' 0				-> hide the Logo on the jog
+'@$joglogo20' 1				-> show the Logo on the jog (you can changge the logo on the img.png)
+--------------------------------------------------------------------------------
+'@$songinfoborder20' 0		-> show the little borders around the song information
+'@$songinfoborder20' 1		-> hide the little borders around the song information
+--------------------------------------------------------------------------------
+'@$infoscroll20' 0			-> static text of the Artist/Title on the song informations
+'@$infoscroll20' 1			-> scroll text of the Artist/Title on the song informations
+--------------------------------------------------------------------------------
+'@$cueloop20' 0				-> show HotCUEs
+'@$cueloop20' 1				-> show saved Loops
+--------------------------------------------------------------------------------
+'@$deckborder20' 0			-> transparent border color arount the master/select deck
+'@$deckborder20' 1			-> full color border arount the master/select deck
+--------------------------------------------------------------------------------
+'@$hide20' 0				-> show the buttons P.O.I., LOCK, SNAP, REC, SAVE, LOAD
+'@$hide20' 1				-> hide the buttons P.O.I., LOCK, SNAP, REC, SAVE, LOAD
+--------------------------------------------------------------------------------
+'@$hidecenter20' 0			-> show the controlls on the center scratch layout
+'@$hidecenter20' 1			-> hide the controlls on the center scratch layout
+--------------------------------------------------------------------------------
+'@$titlecolor20' 0			-> songinfo text color title light grey
+'@$titlecolor20' 1			-> songinfo text color title deck color
+'@$titlecolor20' 2			-> songinfo text color title grey
+--------------------------------------------------------------------------------
+'@$authorcolor20' 0			-> songinfo text color author grey
+'@$authorcolor20' 1			-> songinfo text color author deck color
+'@$authorcolor20' 2			-> songinfo text color author light grey
+--------------------------------------------------------------------------------
+'@$topbrowser20' 0			-> show the browser on bottom
+'@$topbrowser20' 1			-> show the browser on top
+--------------------------------------------------------------------------------
+'@$topzonemstvu20' 0		-> show Master VU
+'@$topzonemstvu20' 1		-> hide Master VU
+--------------------------------------------------------------------------------
+'@$efxwave20' 0				-> show EFX 3/1	   
+'@$efxwave20' 1				-> show scratchwave
+--------------------------------------------------------------------------------
+'@$efxpad20' 0				-> toggle the effects area and the pad area	   
+'@$efxpad20' 1				-> show scratchwave
+--------------------------------------------------------------------------------
+'@$fadervariation20' 0		-> Fader design 1
+'@$fadervariation20' 1		-> Fader design 2
+'@$fadervariation20' 1		-> Fader design 3
+--------------------------------------------------------------------------------
+'@$customnocenter20' 0		-> hide Custom Buttons when no Center is activ
+'@$customnocenter20' 1		-> show Custom Buttons when no Center is activ
+--------------------------------------------------------------------------------
+'@$gridpos20' 0				-> Wavegrid -  0 PX
+'@$gridpos20' 1				-> Wavegrid - -1 PX
+'@$gridpos20' 2				-> Wavegrid - -2 PX
+'@$gridpos20' 3				-> Wavegrid - -3 PX
+--------------------------------------------------------------------------------
+'@$vuoptic20' 0				-> classic VU Meter design
+'@$vuoptic20' 1				-> new VU Meter design
+--------------------------------------------------------------------------------
+'@$icons20' 0				-> DennYo Icons
+'@$icons20' 1				-> VDJ Icons
+--------------------------------------------------------------------------------
+'@$knobefxvalue20' 0		-> Value/Text under the EFX Knob
+'@$knobefxvalue20' 1		-> Value under the EFX Knob and Text in the Knob
+--------------------------------------------------------------------------------
+'@%cueaction20' 0			-> DennYo Cue Action Mode off
+'@%cueaction20' 1			-> DennYo Cue Action Mode on
+--------------------------------------------------------------------------------
+'@$browsertoolbar20' 0		-> hide the additional Buttons on the Browsertoolbar
+'@$browsertoolbar20' 1		-> show the additional Buttons on the Browsertoolbar
+--------------------------------------------------------------------------------
+'@$prelistenoptic20' 0		-> show the prelisten player with waveform
+'@$prelistenoptic20' 1		-> show the classic prelisten player
+--------------------------------------------------------------------------------
+'@$cuesubmission20' 0		-> CUE submission off
+'@$cuesubmission20' 1		-> show Cue submissions
+--------------------------------------------------------------------------------
+'@$jogoptic20' 0			-> new Jog design
+'@$jogoptic20' 1			-> classic Jog design
+'@$jogoptic20' 2			-> PIO Jog design
+--------------------------------------------------------------------------------
+'@$cuejumpefx20' 0			-> show the CUE JUMP MODE on HOTCUES
+'@$cuejumpefx20' 1			-> show the CUE JUMP MODE on EFX
+--------------------------------------------------------------------------------
+'@$cbgadjust20' 0			-> hide te Grid Adjust on Songinfos
+'@$cbgadjust20' 1			-> show te Grid Adjust on Songinfos
+--------------------------------------------------------------------------------
+'@$wavecolor20' 0			-> default Virtual DJ Wave Color
+'@$wavecolor20' 1			-> Pioneer Wave Color
+'@$wavecolor20' 2			-> Denon Wave Color
+'@$wavecolor20' 3			-> per Deck
+--------------------------------------------------------------------------------
+'@$vucolor20' 0				-> per Deck
+'@$vucolor20' 1				-> green
+--------------------------------------------------------------------------------
+'@$masterefx20' 0			-> show Master FX Controls on Center Master Panel
+'@$masterefx20' 1			-> show Record Infos on Center Master Panel
+--------------------------------------------------------------------------------
+'@$cueactionshow20' 0		-> toggle automatic CUE & CUEJUMP Points on Hotcues
+'@$cueactionshow20' 1		-> dont't toggle automatic CUE & CUEJUMP Points on Hotcues
+--------------------------------------------------------------------------------
+'@$jogsync20' 0				-> Jog Standart Spinner
+'@$jogsync20' 1				-> Jog 16 Beats Jump Overlay
+'@$jogsync20' 2				-> Jog 16 Beats Smoth Overlay
+--------------------------------------------------------------------------------
+'@$gridcolor20' 0			-> Grid Color per Deck
+'@$gridcolor20' 1			-> Grid Color red
+'@$gridcolor20' 2			-> Grid Color blue
+'@$gridcolor20' 3			-> Grid Color green
+'@$gridcolor20' 4			-> Grid Color yellow
+'@$gridcolor20' 5			-> Grid Color red - Pioneer Shape
+'@$gridcolor20' 6			-> Grid Color green - Denon Shape
+--------------------------------------------------------------------------------
+'@$centerbutton20' 0		-> show the Centerbuttons Mixer/Video/Scratch/Master
+'@$centerbutton20' 1		-> hide the Centerbuttons Mixer/Video/Scratch/Master
+--------------------------------------------------------------------------------
+'@$topzonecpu20' 0			-> Topzone show CPU Meter
+'@$topzonecpu20' 1			-> Topzone hide CPU Meter
+--------------------------------------------------------------------------------
+'@$topzonebat20' 0			-> Topzone show Batterie
+'@$topzonebat20' 1			-> Topzone hide Batterie
+--------------------------------------------------------------------------------
+'@$topzoneuser20' 0			-> Topzone show User
+'@$topzoneuser20' 1			-> Topzone hide User
+--------------------------------------------------------------------------------
+'@$topzonerec20' 0			-> Topzone show Record
+'@$topzonerec20' 1			-> Topzone hide Record
+--------------------------------------------------------------------------------
+'@$topzoneqt20' 0			-> Topzone show Quantize Button
+'@$topzoneqt20' 1			-> Topzone hide Quantize Button
+--------------------------------------------------------------------------------
+'@$topzonebrowser20' 0		-> Topzone show Browser Button
+'@$topzonebrowser20' 1		-> Topzone hide Browser Button
+--------------------------------------------------------------------------------
+'@$topzonesand20' 0			-> Topzone show Sandbox
+'@$topzonesand20' 1			-> Topzone hide Sandbox
+--------------------------------------------------------------------------------
+'@$topzonebar20' 0			-> Topzone show Beatbar
+'@$topzonebar20' 1			-> Topzone hide Beatbar
+--------------------------------------------------------------------------------
+'@topzoneevent20' 0			-> Topzone show Event Button
+'@topzoneevent20' 1			-> Topzone hide Event Button
+--------------------------------------------------------------------------------
+'@$topzonewavezoom20' 0		-> Topzone show Wave Zoom
+'@$topzonewavezoom20' 1		-> Topzone hide Wave Zoom
+--------------------------------------------------------------------------------
+'@$topzonemstefx20' 0		-> Topzone show Master EFX
+'@$topzonemstefx20' 1		-> Topzone hide Master EFX
+--------------------------------------------------------------------------------
+'@$topzonemstvol20' 0		-> Topzone show Master Controls
+'@$topzonemstvol20' 1		-> Topzone hide Master Controls
+--------------------------------------------------------------------------------
+'@$wave20' 0				-> Scratchwave Backgroundshadow 1
+'@$wave20' 1				-> Scratchwave Backgroundshadow 2
+'@$wave20' 2				-> Scratchwave Backgroundshadow off
+--------------------------------------------------------------------------------
+'@$browserfont20' 0			-> fist Browser Window Font Size
+'@$browserfont20' 1			-> second Browser Window Font Size
+--------------------------------------------------------------------------------
+'@$recbcast20' 0			-> show Record in the Topzone
+'@$recbcast20' 1			-> show Broadcast in the Topzone
+--------------------------------------------------------------------------------
+'@%jumppagevertical20' 0	-> show CueJump Page 1 on Vertical 4 Deck
+'@%jumppagevertical20' 1	-> show CueJump Page 2 on Vertical 4 Deck
+'@%jumppagevertical20' 2	-> show CueJump Page 3 on Vertical 4 Deck
+'@%jumppagevertical20' 3	-> show CueJump Page 4 on Vertical 4 Deck
+--------------------------------------------------------------------------------
+'@$jogvinyl20' 0			-> show a Border around the Jog when Vinyl is on
+'@$jogvinyl20' 1			-> hide the Border
+--------------------------------------------------------------------------------
+'@$jogslip20' 0				-> change the Color of the Spinner when Slip Mode on
+'@$jogslip20' 1				-> don't change the Color on Slip Mode on
+--------------------------------------------------------------------------------
+'@$jogloop20' 0				-> show the Loop length on Jog
+'@$jogloop20' 1				-> hide the Loop length on Jog
+--------------------------------------------------------------------------------
+'@$wavebar220' 0			-> hide the Overlay on Scratchwave
+'@$wavebar220' 1			-> show the bar counter on Scratchwave
+'@$wavebar220' 2			-> show the beat counter on Scratchwave
+'@$wavebar220' 3			-> show loop legth on Scratchwave
+'@$wavebar220' 4			-> show Volume Fader % on Scratchwave
+'@$wavebar220' 5			-> show Deck Number
+'@$wavebar220' 6			-> time left
+'@$wavebar220' 7			-> time remain
+--------------------------------------------------------------------------------
+'@$gridcolorgrey20' 0		-> dark grey Grid
+'@$gridcolorgrey20' 1		-> bright grey grid
+--------------------------------------------------------------------------------
+'@$loopfilter20' 0			-> hide Color FX below the Loop Section
+'@$loopfilter20' 1			-> show Color FX below the Loop Section
+'@$loopfilter20' 2			-> show Video FX below the Loop Section
+--------------------------------------------------------------------------------
+'@$infotext20' 0			-> Infotext highligth off
+'@$infotext20' 1			-> Infotext highlight on
+--------------------------------------------------------------------------------
+'@$wavedimmall20' 0			-> dimm Scratchwaves off
+'@$wavedimmall20' 1			-> dimm Scratchwaves on
+--------------------------------------------------------------------------------
+'@$wavedimmvalue20' 0.0-1.0	-> dimm the Waveform in %
+--------------------------------------------------------------------------------
+'@$zoomdimm20' 0			-> show Zoom Slider
+'@$zoomdimm20' 1			-> show Dimm Slider
+--------------------------------------------------------------------------------
+'@$songcontrol20' 0			-> square Song Control Buttons
+'@$songcontrol20' 1			-> round Song Control Buttons
+--------------------------------------------------------------------------------
+'@$splitwavevertical' 0		-> not slit - only 4 deck vertical
+'@$splitwavevertical' 1		-> split extra big and small "1 Wave" to 2 Waves 
+'@$splitwavevertical' 2		-> split extra "1 Wave" to 2 Waves
+--------------------------------------------------------------------------------
+'@$wavehalf20' 0			-> full Main Scratchwave
+'@$wavehalf20' 1			-> halve Main Scratchwave
+--------------------------------------------------------------------------------
+'@$padbutton20' 0			-> default Pad
+'@$padbutton20' 1			-> 4 Btn Pad
+--------------------------------------------------------------------------------
+'@$bordersize20' 0			-> Deck Border 1 Pixel
+'@$bordersize20' 1			-> Deck Border 2 Pixel
+--------------------------------------------------------------------------------
+'@$verticalinfo20' 0		-> Songinfo vertical small 2 Layout 1
+'@$verticalinfo20' 1		-> Songinfo vertical small 2 Layout 2
+--------------------------------------------------------------------------------
+'@$pitchvolume20' 0			-> toggle Pitch and Volume (only Variation simple Video)
+'@$pitchvolume20' 1			-> toggle Pitch and Volume (only Variation simple Video)
+--------------------------------------------------------------------------------
+'@$topzonemaster20' 0		-> show Balance & Volume Knob
+'@$topzonemaster20' 1		-> show Volume Fader
+--------------------------------------------------------------------------------
+'@$padhighlight20' 0		-> grey Pad Background
+'@$padhighlight20' 1		-> Deck Color Pad Background
+--------------------------------------------------------------------------------
+'@$songposplay20' 0			-> hide stronger played mark at Songpos Wave
+'@$songposplay20' 1			-> show stronger played mark at Songpos Wave
+--------------------------------------------------------------------------------
+'@$prelisten220' 0			-> hide Prelisten near Searchbar
+'@$prelisten220' 1			-> show Prelisten near Searchbar
+--------------------------------------------------------------------------------
+'@$songposblink20' 0		-> hide Songpos Wave blink Song end
+'@$songposblink20' 1		-> show Songpos Wave blink Song end
+--------------------------------------------------------------------------------
+'@$songready20' 0			-> hide Stems Song Ready Hook before Title
+'@$songready20' 1			-> show Stems Song Ready Hook before Title
+--------------------------------------------------------------------------------
+'@$eventstem20' 0			-> show Event on Top Zone
+'@$eventstem20' 1			-> show Stems on Top Zone
+--------------------------------------------------------------------------------
+'@$cuecolor20' 0			-> show Cue Color
+'@$cuecolor20' 1			-> hide Cue Color
+--------------------------------------------------------------------------------
+'@$cuenumbercolor20' 0		-> Songpos Cue Numbers white Square
+'@$cuenumbercolor20' 1		-> Songpos Cue Numbers Cue Color Square
+'@$cuenumbercolor20' 2		-> Songpos Cue Numbers no Square
+--------------------------------------------------------------------------------
+'@$32beats20' 0				-> Beat Marker Songpos off
+'@$32beats20' 1				-> 64 Beat Marker Songpos
+'@$32beats20' 2				-> 32 Beat Marker Songpos
+--------------------------------------------------------------------------------
+'@$32beatshight20' 0		-> small 32Beats Marker Songpos
+'@$32beatshight20' 1		-> full height 32Beats Marker Songpos
+--------------------------------------------------------------------------------
+'@$prelistenlock20' 0		-> unlock Prelisten Window
+'@$prelistenlock20' 1		-> lock Prelisten Window
+--------------------------------------------------------------------------------
+'@$waveovelay20' 0			-> hide Ovelays
+'@$waveovelay20' 1			-> Wave Overlay 1
+'@$waveovelay20' 2			-> Wave Overlay 2
+--------------------------------------------------------------------------------
+'@$wavebarpos20' 0			-> Wave Overlay Center Scratchwave vertical - bottom
+'@$wavebarpos20' 1			-> Wave Overlay Center Scratchwave vertical - Playhead
+--------------------------------------------------------------------------------
+'@$cbbarknobs20' 0			-> custom Button bar knobs left
+'@$cbbarknobs20' 1			-> custom Button bar knobs right
+'@$cbbarknobs20' 2			-> custom Button bar knobs 2 left / 2 right
+--------------------------------------------------------------------------------
+'@$songposdefault20' 0		-> show custom Songpos Wave
+'@$songposdefault20' 1		-> show CDJ Standard Songpos Wave
+--------------------------------------------------------------------------------
+'@$custombar220' 0			-> show Custom Button Bar Slot 1
+'@$custombar220' 1			-> show Custom Button Bar Slot 2
+--------------------------------------------------------------------------------
+'@$browserlink20' 0			-> browser zoom controller link off
+'@$browserlink20' 1			-> browser zoom controller link on
+--------------------------------------------------------------------------------
+'@$browserview20' 0			-> Standard Browser
+'@$browserview20' 1			-> Sideview on bottom
+--------------------------------------------------------------------------------
+'@$textcolorgrey20' 0		-> Textcolor middle
+'@$textcolorgrey20' 1		-> Textcolor bright
+'@$textcolorgrey20' 2		-> Textcolor dark
+--------------------------------------------------------------------------------
+'@$keycolor20' 0			-> Key color Camelot in the Song Infos
+'@$keycolor20' 1			-> Key color grey in the Song Infos
+--------------------------------------------------------------------------------
+'@$songinfoview20' 0		-> bigger Song Infos
+'@$songinfoview20' 1		-> smaller Song Infos
+--------------------------------------------------------------------------------
+'@$paddesign20' 0			-> PAD design 1
+'@$paddesign20' 1			-> PAD design 2
+--------------------------------------------------------------------------------
+'@$cuedesign20' 0			-> CUE design 1
+'@$cuedesign20' 1			-> CUE design 2
+--------------------------------------------------------------------------------
+'%pad1620' 0				-> show PAD 1-8
+'%pad1620' 1				-> show PAD 9-16
+'%pad1620' 2				-> show PAD 1-16
+--------------------------------------------------------------------------------
+'@$history20' 0				-> show the yellow libe when "write History" off
+'@$history20' 1				-> hide the yellow line when "write Histoy" off
+--------------------------------------------------------------------------------
+'@$beatcounter20' 0			-> show the beatcounter like DennYo
+'@$beatcounter20' 1			-> show the beatcounter like Virtual DJ
+'@$beatcounter20' 2			-> beat counter like vdj with beat diff on top
+'@$beatcounter20' 3			-> beat counter 16 bar counter 4
+--------------------------------------------------------------------------------
+'@$masterpeak20' 0			-> show Master Peak
+'@$masterpeak20' 1			-> hide Master Peak
+--------------------------------------------------------------------------------
+'@$deckpeak20' 0			-> hide Deck Peak
+'@$deckpeak20' 1			-> show Deck Peak
+--------------------------------------------------------------------------------
+'@$verticalsmallmirror20' 0	-> 4 Deck vertical small mirrored
+'@$verticalsmallmirror20' 1	-> 4 Deck vertical small not mirrored
+--------------------------------------------------------------------------------
+'@$lockenabled20' 0			-> Lock Skin diable
+'@$lockenabled20' 1			-> Lock Skin enable
+--------------------------------------------------------------------------------
+'@$phasesort20' 0			-> Beatcounter sort wave
+'@$phasesort20' 1			-> Beatcounter sort mixer
+--------------------------------------------------------------------------------
+
+Skin.XML Index
+
+---Breakline-Bottom-Browser---
+---Breakline-Top-Browser---
+
+---main---
+
+---color-define-not-daylight-blue-red---
+---color-define-not-daylight-blue-yellow---
+---color-define-not-daylight-blue-only---
+---color-define-not-daylight-yellow-only---
+---color-define-not-daylight-greyblue-only---
+
+---color-define-light-grey---
+---color-define-dark-grey---
+---color-define-black---
+---color-define-light-grey-2---
+---color-define-dark-grey-2---
+---color-define-day---
+
+---textsize-define-normal---
+---textsize-define-large---
+---textsize-define-extra-large---
+
+---group-define---
+
+---songinfos-browserzoom---
+---songinfos-left---
+---songinfos-right---
+---songinfos-left-nocenter---
+---songinfos-right-nocenter---
+---songinfos-left-extrabig---
+---songinfos-right-extrabig---
+---songinfos-left-extrabig-nocenter---
+---songinfos-right-extrabig-nocenter---
+---songinfos-left-simplevideo---
+---songinfos-right-simplevideo---
+---songinfos-left-simpleaudio---
+---songinfos-right-simpleaudio---
+---songinfos-left-vertical-4---
+---songinfos-right-vertical-4---
+---songinfos-left-vertical-4-nocenter---
+---songinfos-right-vertical-4-nocenter---
+
+---deck-left-big-nopad---
+---deck-left-big---
+---deck-left-big-nopad-nocenter---
+---deck-left-big-nocenter---
+---deck-left-extrabig-nopad---
+---deck-left-extrabig---
+---deck-left-extrabig-nopad-nocenter---
+---deck-left-extrabig-nocenter---
+---deck-left-simple-video---
+---deck-left-prepare---
+---deck-left-small---
+---deck-left-small-nocenter---
+---deck-left-simple-audio---
+---deck-vertical4-left---
+---deck-vertical4-left-nocenter---
+---deck-vertical-small4-left---
+---deck-vertical-small4-left-special--
+---deck-vertical-small4-left-nocenter---
+---deck-vertical-small4-left-nocenter-special---
+
+---deck-right-big-nopad---
+---deck-right-big---
+---deck-right-big-nopad-nocenter---
+---deck-right-big-nocenter---
+---deck-right-extrabig-nopad---
+---deck-right-extrabig---
+---deck-right-extrabig-nopad-nocenter---
+---deck-right-extrabig-nocenter---
+---deck-right-simple-video---
+---deck-right-prepare---
+---deck-right-small---
+---deck-right-small-nocenter---
+---deck-right-simple-audio---
+---deck-vertical4-right---
+---deck-vertical4-right-nocenter---
+---deck-vertical-small4-right---
+---deck-vertical-small4-right-special---
+---deck-vertical-small4-right-nocenter---
+---deck-vertical-small4-right-nocenter-special---
+
+---mixer-2big---
+---mixer-2small---
+---mixer-2big-nopad---
+---mixer-2extrabig---
+---mixer-2extrabig-nopad---
+---mixer-2simple-video---
+
+---mixer-2big-2small---
+---mixer-4small---
+---mixer-4big---
+---mixer-4big-split---
+---mixer-4big-nopad---
+---mixer-2big-nopad-2small---
+
+---mixer-4vertical---
+---mixer-4vertical-wave-1-extrasmall---
+---mixer-4vertical-wave-1-small---
+---mixer-4vertical-wave-1-middle---
+---mixer-4vertical-wave-1-large---
+---mixer-4vertical-wave-1-extralarge---
+
+---mixer-4vertical-small---
+---mixer-4vertical-small-wave-1-extrasmall---
+---mixer-4vertical-small-wave-1-small---
+---mixer4-vertical-small-wave-1-middle---
+---mixer-4vertical-small-wave-1-large---
+---mixer-4vertical-small-wave-1-extralarge---
+
+---deck1-big-nopad---
+---deck3-big-nopad---
+---deck2-big-nopad---
+---deck4-big-nopad---
+
+---deck1-big-nopad-nocenter---
+---deck3-big-nopad-nocenter---
+---deck2-big-nopad-nocenter---
+---deck4-big-nopad-nocenter---
+
+---deck1-big---
+---deck3-big---
+---deck2-big---
+---deck4-big---
+
+---deck1-big-nocenter---
+---deck3-big-nocenter---
+---deck2-big-nocenter---
+---deck4-big-nocenter---
+
+---deck1-small---
+---deck3-small---
+---deck2-small---
+---deck4-small---
+
+---deck1-small-nocenter---
+---deck3-small-nocenter---
+---deck2-small-nocenter---
+---deck4-small-nocenter---
+
+---deck1-simple-audio---
+---deck3-simple-audio---
+---deck2-simple-audio---
+---deck4-simple-audio---
+
+---deck1-extrabig---
+---deck3-extrabig---
+---deck2-extrabig---
+---deck4-extrabig---
+
+---deck1-extrabig-nocenter---
+---deck3-extrabig-nocenter---
+---deck2-extrabig-nocenter---
+---deck4-extrabig-nocenter---
+
+---deck1-extrabig-nopad---
+---deck3-extrabig-nopad---
+---deck2-extrabig-nopad---
+---deck4-extrabig-nopad---
+
+---deck1-extrabig-nopad-nocenter---
+---deck3-extrabig-nopad-nocenter---
+---deck2-extrabig-nopad-nocenter---
+---deck4-extrabig-nopad-nocenter---
+
+---deck1-simple-video---
+---deck3-simple-video---
+---deck2-simple-video---
+---deck4-simple-video---
+
+---deck1-prepare---
+---deck3-prepare---
+---deck2-prepare---
+---deck4-prepare---
+
+---deck1-vertical---
+---deck3-vertical---
+---deck2-vertical---
+---deck4-vertical---
+
+---deck1-vertical-nocenter---
+---deck3-vertical-nocenter---
+---deck2-vertical-nocenter---
+---deck4-vertical-nocenter---
+
+---deck1-vertical-small---
+---deck3-vertical-small---
+---deck2-vertical-small---
+---deck4-vertical-small---
+
+---deck1-vertical-small-nocenter---
+---deck3-vertical-small-nocenter---
+---deck2-vertical-small-nocenter---
+---deck4-vertical-small-nocenter---
+
+---deck1-vertical-small-special---
+---deck3-vertical-small-special---
+---deck2-vertical-small-special---
+---deck4-vertical-small-special---
+
+---deck1-vertical-small-nocenter-special---
+---deck3-vertical-small-nocenter-special---
+---deck2-vertical-small-nocenter-special---
+---deck4-vertical-small-nocenter-special---
+
+---wave-extrasmall---
+---wave-small---
+---wave-middle---
+---wave-large---
+---wave-extralarge---
+
+---wave-1-extrasmall---
+---wave-1-small---
+---wave-1-middle---
+---wave-1-large---
+---wave-1-extralarge---
+
+---wave-extrasmall-2---
+---wave-small-2---
+---wave-middle-2---
+---wave-large-2---
+---wave-extralarge-2---
+
+---wave-1-extrasmall-2---
+---wave-1-small-2---
+---wave-1-middle-2---
+---wave-1-large-2---
+---wave-1-extralarge-2---
+
+---wave-extrasmall-4---
+---wave-small-4---
+---wave-middle-4---
+---wave-large-4---
+---wave-extralarge-4---
+
+---wave-1-extrasmall-4---
+---wave-1-extrasmall-4-vertical---
+---wave-1-small-4---
+---wave-1-small-4-vertical---
+---wave-1-middle-4---
+---wave-1-middle-4-vertical---
+---wave-1-large-4---
+---wave-1-large-4-vertical---
+---wave-1-extralarge-4---
+---wave-1-extralarge-4-vertical---
+
+---wave-1-extrasmall-4-special---
+---wave-1-extrasmall-4-nocenter-special---
+---wave-1-small-4-special---
+---wave-1-small-4-nocenter-special---
+---wave-1-middle-4-special---
+---wave-1-middle-4-nocenter-special---
+---wave-1-large-4-special---
+---wave-1-large-4-nocenter-special---
+---wave-1-extralarge-4-special---
+---wave-1-extralarge-4-nocenter-special---
+
+---wave-extrasmall-2-classic---
+---wave-small-2-classic---
+---wave-middle-2-classic---
+---wave-large-2-classic---
+---wave-extralarge-2-classic---
+---wave-1-extrasmall-2-classic---
+---wave-1-small-2-classic---
+---wave-1-middle-2-classic---
+---wave-1-large-2-classic---
+---wave-1-extralarge-2-classic---
+---wave-extrasmall-4-classic---
+---wave-small-4-classic---
+---wave-middle-4-classic---
+---wave-large-4-classic---
+---wave-extralarge-4-classic---
+---wave-1-extrasmall-4-classic---
+---wave-1-small-4-classic---
+---wave-1-middle-4-classic---
+---wave-1-large-4-classic---
+---wave-1-extralarge-4-classic---
+
+---browserzoom---
+
+---topzone---
+
+---decks-browserzoom-off---
+
+---wave-browser-2deck---
+---wave-browser-2bottomwave---
+---wave-browser-2bottomwave-1--
+---wave-browser-2topwave---
+---wave-browser-2topwave-1---
+---wave-browser-2deck-topbrowser---
+---wave-browser-2bottomwave-topbrowser---
+---wave-browser-2bottomwave-1-topbrowser---
+---wave-browser-2nowave-topbrowser---
+---wave-browser-2topwave-topbrowser---
+---wave-browser-2topwave-1-topbrowser---
+
+---wave-browser-4deck---
+---wave-browser-4bottomwave---
+---wave-browser-4bottomwave-1---
+---wave-browser-4topwave---
+---wave-browser-4topwave-1---
+---wave-browser-4deck-topbrowser---
+---wave-browser-4topwave-topbrowser---
+---wave-browser-4topwave-1-topbrowser---
+---wave-browser-4nowave-topbrowser---
+---wave-browser-4bottomwave-topbrowser---
+---wave-browser-4bottomwave-1-topbrowser---
+
+---2deck---
+---2bottomwave---2bottomwave-1---2nowave---
+---2topwave---
+---2topwave-1---
+
+---4deck---
+---4bottomwave---4bottomwave-1---4nowave---
+---4topwave---
+---4topwave-1---
+
+---2deck-topbrowser---
+---2bottomwave-topbrowser---
+---2bottomwave-1-topbrowser---
+---2topwave-topbrowser---2topwave-1-topbrowser---2nowave-topbrowser---
+
+---4deck-topbrowser---
+---4bottomwave-topbrowser---
+---4bottomwave-1-topbrowser---
+---4topwave-topbrowser---4topwave-1-topbrowser---4nowave-topbrowser---
+
+---2deck-nocenter---
+---2bottomwave-nocenter---2bottomwave-1-nocenter---2nowave-nocenter---
+---2topwave-nocenter---
+---2topwave-1-nocenter---
+
+---4deck-nocenter---
+---4bottomwave-nocenter---4bottomwave-1-nocenter---4nowave-nocenter---
+---4topwave-nocenter---
+---4topwave-1-nocenter---
+
+---2deck-topbrowser-nocenter---
+---2bottomwave-topbrowser-nocenter---
+---2bottomwave-1-topbrowser-nocenter---
+---2topwave-topbrowser-nocenter---2topwave-1-topbrowser-nocenter---2nowavetop-browser-nocenter---
+
+---4decktopbrowser-nocenter---
+---4bottomwave-topbrowser-nocenter---
+---4bottomwave-1-topbrowser-nocenter---
+---4topwave-nocenter-topbrowser---4topwave-1-nocenter-topbrowser---4nowave-nocenter-topbrowser---
+
+---wave-browser-2deck---
+---wave-browser-2bottomwave---
+---wave-browser-2bottomwave-1---
+---wave-browser-2topwave---
+---wave-browser-2topwave-1---
+---wave-browser-2nowave---
+---wave-browser-2deck-topbrowser---
+---wave-browser-2bottomwave-topbrowser---
+---wave-browser-2bottomwave-1-topbrowser---
+
+---wave-browser-4deck---
+---wave-browser-4bottomwave---
+---wave-browser-4bottomwave-1---
+---wave-browser-4topwave---
+---wave-browser-4topwave-1---
+---wave-browser-4nowave---
+---wave-browser-4deck-topbrowser---
+---wave-browser-4bottomwave-topbrowser---
+---wave-browser-4bottomwave-1-topbrowser---
+
+---browserzoom---
+
+---browser-window---
+---cue-window-big---
+---cue-window---
+---sampler-window---
+---sidelist-window---
+---sideview-window---
+---prelisten-window---
+---support-panel-window---
+---preset-window---
+---wall-of-supporters---
+---bpm-calculator-window---
+
+---multibutton---
+
+
+		<browserColumns modified="yes">file=wave(9.7),leng(3.6),bpm(3.9),key(4.7),titl(22.6),arti(14.3),year(4),comm(7),usr1(8),genr(8.2),star(4.6),usr2(1.9),play(1.9),bitr(2.7),trck(2,9)|file(virt)=wave(9.7),leng(3.6),bpm(3.9),key(4.7),titl(22.6),arti(14.3),year(4),comm(7),usr1(8),genr(8.2),star(4.6),usr2(1.9),play(1.9),bitr(2.7),ord(2,9)|file(hist)=wave(9.7),leng(3.6),bpm(3.9),key(4.7),titl(22.6),arti(14.3),year(4),comm(7),usr1(8),genr(8.2),star(4.6),usr2(1.9),play(1.9),bitr(2.7),ord(2,9)|file(play)=wave(9.7),leng(3.6),bpm(3.9),key(4.7),titl(22.6),arti(14.3),year(4),comm(7),usr1(8),genr(8.2),star(4.6),usr2(1.9),play(1.9),bitr(2.7),ord(2,9)|file(auto)=wave(9.7),leng(3.6),bpm(3.9),key(4.7),titl(22.6),arti(14.3),year(4),comm(7),usr1(8),genr(8.2),star(4.6),usr2(1.9),play(1.9),bitr(2.7),ord(2,9)|file(samp)=spla(4),spos(4),titl(88),sedi(4)|side=wave(9.7),leng(3.6),bpm(3.9),key(4.7),titl(22.6),arti(14.3),year(4),comm(7),usr1(8),genr(8.2),star(4.6),usr2(1.9),play(1.9),bitr(2.7),ord(2,9)|side(auto)=wave(9.7),leng(3.6),bpm(3.9),key(4.7),titl(22.6),arti(14.3),year(4),comm(7),usr1(8),genr(8.2),star(4.6),usr2(1.9),play(1.9),bitr(2.7),ord(2,9)|side(play)=wave(9.7),leng(3.6),bpm(3.9),key(4.7),titl(22.6),arti(14.3),year(4),comm(7),usr1(8),genr(8.2),star(4.6),usr2(1.9),play(1.9),bitr(2.7),ord(2,9)|side(virt)=wave(9.7),leng(3.6),bpm(3.9),key(4.7),titl(22.6),arti(14.3),year(4),comm(7),usr1(8),genr(8.2),star(4.6),usr2(1.9),play(1.9),bitr(2.7),ord(2,9)|side(rmix)=mix(100)|side(sbnk)=spla(10),titl(60),svol(30)</browserColumns>

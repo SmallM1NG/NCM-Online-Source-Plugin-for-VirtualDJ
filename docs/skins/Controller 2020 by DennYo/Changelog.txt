@@ -1,0 +1,460 @@
+Version 3.4.4 - 2024/04/11
+
+	change - add a Supporter
+	change - some Customicons
+	
+________________________________________________________________________________
+Version 3.4.3 - 2023/11/26
+
+	bugfix - the phase circle on 4 deck wrong sort. (Topzone)
+	bugfix - little visual correctures
+
+	add - on exit script to stop repeat scripts from the Skin
+	add - change the sort behavior of the Beatcounter WAVE or MIXER ("Skin Button"/Top Zone/Beatcounter sort Mixer)
+
+	change - updated the Wall of Supporter
+	change - Songswave half to the new native child half="yes" works only later than BUILD 7735 (2023-10-23)
+________________________________________________________________________________
+Version 3.4.2 - 2023/08/05
+
+	add - Bars/Beats Counter 4/16 on Topzone ("Skin Button"/Top Zone/Beatcounter 1/2/3/4)
+	add - enable/disable the Lock Skin ("Skin Button"/Lock Skin/Lock Skin enable)
+________________________________________________________________________________
+Version 3.4.1 - 2023/04/17
+	
+	bugfix - position bug Support Page on MAC
+________________________________________________________________________________
+Version 3.4.0 - 2023/04/04
+	
+	add - Ask The DJ Message Counter on the Browser Zoom Button (set askTheDJMonitoring to always)
+________________________________________________________________________________
+Version 3.3.9 - 2023/02/28
+	
+	Bugfix - Cue Marker on the Classic Wave wasn't visible
+________________________________________________________________________________
+Version 3.3.8 - 2023/02/26
+
+	Bugfix - SAVE/LOAD Preset 1 work not correct
+	Bugfix - loop load on the Cue Area don't work correct
+	Bugfix - Songpos Wave at the Cue Window won't show
+	Bugfix - Volume Fader Lines Deck 1 on Mixer "2 Deck big + 2 Deck small"
+
+	add - Camalot KEY Color in the Deck Song Infos ("Skin Button"/Song Infos/KEY Color)
+	add - bigger Text size of the Song Infos ("Skin Button"/Song Infos/Info Text Size)
+	add - new PAD desing("Skin Button"/Skin Design/PADs)
+	add - new CUE desing("Skin Button"/Skin Design/CUEs)
+	add - PAD Layout 9-16 and 1-16 (click on the Text 1-8, 8-16, 1-16 or use script*)
+	add - hide the yellow Line when setting "writeHistory" off ("Skin Button"/Browser/Prepare Mode)		
+	add - a third Beatcounter with beatdiff on Topzone ("Skin Button"/Top Zone/Beatcounter 1/2/3) 
+	add - quick setting menus on the area names "HOTCUES" "LOOP" "EFX" "PADS"
+	add - new variation "4 Deck vertical performance 2" ("SKIN Button"/Variation/4 Deck vertical performance 2)
+
+	change - Code of the PADs
+	change - Variation Center/Mixer off --> "Big" "Middle" "Small" "Big - bigger view" "Middle - bigger view"
+	change - Topzone buttons rearranged
+	change - Topzone buttons now move when any element where hide
+	change - VU Meters from img.png to vector elements
+	change - Betcounter 16 from img.png to vector element
+	change - ratio 4 button from img.png to vector element
+	change - rename "4 Deck vertical small" to "4 Deck vertical performance"
+
+	* set '%pad1620' 0 - PAD 1-8
+	* set '%pad1620' 1 - PAD 9-16
+	* set '%pad1620' 2 - PAD 1-16
+________________________________________________________________________________
+Version 3.3.7 - 2023/01/29
+
+	Bugfix - correct the border size of the Custum Logo in the img.png
+	Bugfix - load "Skin Presets" at the additional "Browser Button" shows only 'load1'
+	Bugfix - Cue Number 13 wasn't visible at the Songpos Wave
+	Bugfix - little things that i saw on scrolling in the Code
+
+	add - Change to the default "Songpos Wave" ("Skin Button"/Song Position Wave/VDJ Default)
+	add - second Custom Button slot for the Custom Button Bar ("Skin Button"/Browser/Slot)
+	add - add a Lock Screen*, activate click the "VirtualDJ" Logo, deactivate by 3 clicks in the right order. "VirtualDJ" Logo 1. "DJ" / 2. "VI" / 3. "RTUAL" ("Skin Button"/Lock Screen)
+	add - Browser Zoom Link for Controllers ("Skin Button"/Browser/Browser Zoom Link)
+	add - Set Pitch to an custom BPM. Click the BPM Value on the Jog Wheel.
+	add - Custom Browser with Sideview on the bottom "show_splitpanel 'sideviewbottom'" ("Skin Button"/Browser/Sideview on Bottom)
+	add - new Text Colors "bright, middle, dark", default is middle, bright is the old Color ("Skin Button"/Skin Color Scheme/Text Color)
+	add - invert the Pitch Fader ("Skin Button"/Deck Setup/invert Pitch Fader)
+
+	change - Split Wave Masterdeck dimm and delete the "MASTER" & "SELECT" Buttons on the Master Waves
+	change - optical changes / 2 Deck big - bigger view / 2 Deck middle - bigger view / simple Audio
+	change - little color changes	
+	change - Custom Buttons when Center "off"
+
+	*add your own Lock Screen Picture by edit/replace the lock.png (resolution 1920x1080)
+________________________________________________________________________________
+Version 3.3.6 - 2022/12/21
+
+	Bugfix - Mouse use - when half high Mainwave
+	Bugfix - 4 Deck split - when half high Mainwave
+	Bugfix - VU Meter, Design 2, Deck 4, color green, Deck color grey-blue
+
+	add - full high 32/64 Beats Marker at the Songposwave ("Skin Button"/Song Position Wave/full hight)
+	add - new Variation "2 Deck prepare" ("Skin Button"/Skin Variation/2 Deck prepare)
+	add - new Variation "simple Audio" ("Skin Button"/Skin Variation/simple Audio)
+	add - save/load Skin Presets ("Skin Button"/Save & Load Presets)
+	add - change the Knob Position on the Custum Button Bar ("Skin Button"/Browser/Knob Position)
+	add - Loop to Variation "2 Deck simple Video" ("Skin Button"/Deck Setup/Song Transport)
+
+	change - Menu "Skin Button"/Deck Setup shows only options that available on the chosen Variation
+	change - optimize Code of the Songposwave
+________________________________________________________________________________
+Version 3.3.5 - 2022/11/30
+
+	Bugfix - TAP Button Icon was on Deck right extra Big no Cover not visible
+	Bugfix - BPM on Jog dark when BPM smaller 100
+	Bugfix - on Variation 2 big the Filter Value and resonance textzone on same place 
+	Bugfix - Jog Design 3 Color Scheme dark grey
+
+	add - german translation for the Skin & Wave Menu
+	add - new Deck Color grey-blue only "my new favorite" ("Skin Button"/Skin Color Scheme/Deck Color)
+	add - toggle the Master Volume Knob on Topzone to a Fader ("Skin Button"/Top Zone/toggle Master Volume)
+	add - toggle the Event Button to a Stems Button ("Skin Button"/Top Zone/Event or Stems)
+	add - new Variation 2 Deck simple Video ("Skin Button"/Skin Variation/2 Deck simple Video) 
+	add - toggle Volume & Pitch Fader on 2 Deck simple Video on Mixer Video ("Skin Button"/Center/toggle Pitch & Volume Fader)
+	add - toggle the PAD Highlight Background to Deck Color ("Skin Button"/Skin Color Scheme/PAD Highlight)
+	add - Prelisten near Searchbar ("Skin Button"/Browser/Prelisten - near Searchbar)
+	add - Deck Border Song end blink ("Skin Button"/Deck Setup/Border Song end blink)
+	add - show the Deck Video FX on the Loop Area ("Skin Button"/Deck Setup/LOOPs)
+	add - hide the Cue Colors on the Cue Buttons ("Skin Button"/Deck Setup/Cue Color)
+	add - stronger played mark at the Songpos Wave ("Skin Button"/Song Position Wave/stronger played mark)
+	add - full high played mark at halve height Songpos Wave, when CUEs on Songpos Wave
+	add - 32/64 Beats Marker at Songpos Wave ("Skin Button"/Song Position Wave/Beat Marker)
+	add - Songpos Wave Song end blink ("Skin Button"/Song Position Wave/Song end blink)	
+	add - 2. Layout for the Deckinfos on 4 Deck vertical small ("Skin Button"/Song Infos/Deckinfos - 4 Deck vertical small)
+	add - Song ready Hook (Stems) before the Title in the Songinfo Area ("Skin Button"/Song Infos/Song Ready Hook before Title (Stems))
+
+	change - img.PNG
+________________________________________________________________________________
+Version 3.3.4b - 2022/11/02
+
+	Bugfix - Position correctures 4 BTN PADs
+
+	change - Master Color from yellow to bluegrey 
+________________________________________________________________________________
+Version 3.3.4 - 2022/11/02
+
+	Bugfix - Position correctures
+
+	add - Wave Variation "split Wave" for all 4 Deck Variations with Botton/Top Wave 1. ("Wave Button"/Wave Size/4 Deck split)
+	add - toggle Sandbox Button to RampStopTime ("Skin Button"/Top Zone/toggle Sandbox & RampStopTime)
+	add - change the Jog to a Video Player
+	add - Pad view 4 Button ("Skin Button"/Deck Setup/PAD 4 BTN)
+
+	change - 4 Deck vertical small, full size when you use the option "Center off"
+	change - 4 Deck vertical, full size when you use the option "Center off"
+	change - color changes Browser all Color Schemes
+	change - litle color changes
+________________________________________________________________________________
+Version 3.3.3 - 2022/10/17
+
+	Bugfix - Position correctures
+
+	add - new Variation 4 Deck vertical small + mirrored ("Skin Button"/Skin Variation/4 Deck vertical small)
+	add - Wave Variation "split Wave" for 4 Deck vertical and 4 Deck vertical small with Botton/Top Wave 1. ("Wave Button"/Wave Size/4 Deck vertical)
+	add - Sideview Window
+	add - Sidelist Window
+	add - half Main Scratchwave ("Wave Button"/Wave Size/Wave full halve)	
+
+	change - optimize Code
+________________________________________________________________________________
+Version 3.3.2 - 2020/10/03
+
+	Bugfix - Color FX Dropdown Button Size, Loop Area
+	Bugfix - on 4 Deck vertical the CUE Jump Pages selector wasn't visible
+
+	add - new design of the Control Buttons, CUE/PLAY/STOP/SYNC ("Skin Button"/Skin Design/Song Control Buttons)
+	add - new Jog design ("Skin Button"/Jog/Jog Design 3)
+	add - Highlight the Text "Slip & Vinyl" when active ("Skin Button"/Jog/VinylSlip - Button)
+	add - Wavedim for all Scratchwaves with customize Value & Slider ("Wave Button"/Scratchwave Color/Dimm)
+
+	change - Variable Support Page
+	change - little Position correctures
+	change - little optical changes
+________________________________________________________________________________
+Version 3.3.1 - 2022/09/23
+
+	Bugfix - Cue Marker on Wave when shrink the Skin
+	Bugfix - Browser could'nt be hide on 4-Deck 
+
+	add - show the Color FX on the Loop Area ("Skin Button"/Deck Setup/LOOPs)
+
+	change - Position of the on Jog Loop
+________________________________________________________________________________
+Version 3.3.0 - 2022/09/05
+
+	Bugfix - the Visual for smart_play wasn't visible on the round Multimenu Button, Variation Big - dark grey - blue/red
+	Bugfix - the Cue Numbers on the Song Position Wave couldn't be hide 
+	Bugfix - on Text Font Size "bigger Font" the Playmarker on the "extra Big Main  Wave" wasn't visible
+	Bugfix - on Text Font Size "extra Big Font" the Main Scracht Wave wasn't visible
+
+	add - new Variation 4 Deck vertical ("Skin 4 Button"/Variation/4 Deck vertical)
+	add - toggle Record & Broadcast in the Top Zone (loopfilter20)		 
+	add - Border around the Jog when Vinyl Mode on ("Skin Button"/Jog/Border Vinyl Mode)
+	add - show a Slip Mode Spinner ("Skin Button"/Jog/show a Slip Spinner on Slip Mode)
+	add - show the Loop length on Jog ("Skin Button"/Jog/show Loop length when Loop on)
+	add - Wave Overlays ("Wave Button"/Overlay/Overlay)
+	add - Grid Color grey bright/dark ("Wave Button"/Scratchwave Color/Grid Color - grey)
+	add - Wave Background dark grey ("Wave Button"/Scratchwave Color/Background)
+
+	change - little visual changes
+________________________________________________________________________________
+Version 3.2.9 - 2022/08/17
+
+	Bugfix - Wave Position Center Scratch Wave on Setting "Grid Pos -3" (Skin Variation 2 middle extra)
+	Bugfix - Position of the Playmarker Center Scratch Wave on Setting "bigger Font"
+	Bugfix - Delete the Oninit/Onload action Headphones and Mic
+	Bugfix - Classicwave Mirrored extra large bottom on Skin Variation extra big
+	Bugfix - MAC: when not loaded a track there was a red shape on the Song spend/remain Timer
+	Bugfix - Song End Warning was not visible on small Deck
+
+	add - Song End Warning at the tiny Deck on Browser Zoom
+	add - extra Window for Sampler ("Skin Button"/Extra Windows/Sampler Window)
+
+	change - the Dialogs Color works from the Virtual DJ Settings now. automatic/dark/light
+________________________________________________________________________________
+Version 3.2.8 - 2022/08/02
+
+	Bugfix - the Center Scratchwave wasn't visible when the Main Scratchwave was Classic Wave (Beat Wave)
+
+	add - Hide Controls from the Topzone ("Skin Button"/Topzone/show-hide)
+
+	change - redesign the Classic Main Wave
+________________________________________________________________________________
+Version 3.2.7b - 2022/07/26
+
+	change - little Text changes
+________________________________________________________________________________
+Version 3.2.7 - 2022/07/26
+
+	add - Mainwave size extra small
+	add - all Settings of the Main Scratchwave (horizontal) also on Center Scratchwave (vertical) now (Gridpos Move, Shadow Background, Wave Background, Dimm Inactive, ...)
+	add - CUEJUMP Jump and Target Points auto toggle on HOTCUE Area can turn off ("Skin Button"/Deck Setup/Auto toggle on Hotcue Area)
+	add - show a 16 Beat Jump Spinner Overlay on Jog, only visible when "setting RPM '4 beats'" is activ ("Skin Button"/Jog/Jog Spinner 16 Beats Jump Overlay)
+	add - show a 16 Beat Smoth Spinner Overlay on Jog, only visible when "setting RPM '4 beats'" is activ ("Skin Button"/Jog/Jog Spinner 16 Beats Smoth Overlay)
+	add - Grid Colors per Deck/red/blue/green/yellow/red - Pioneer Shape/green - Denon Shape ("Wave Button"/Scratchwave Color/Grid Color)
+	add - hide the Center Buttons Mixer/Video/Scratch/Master by click on the up Arrow on the Master Button or ("Skin Button"/Center/hide Panel Buttons)
+
+	change - Code of the Scratchwaves
+________________________________________________________________________________
+Version 3.2.6 - 2022/07/22
+
+	Bugfix - Wave Grid Position (0PX / -1PX / -2PX / -3PX) doesn't work on Textsize large and extra large
+	Bugfix - Mouse Control Zone of the Faders
+
+	add - Custom Color for the Shape Wave (Pioneer, Denon, per Deck) ("Wave Button"/Scratchwave Color/Shape Wave)
+	add - Colormode only blue and only yellow ("Skin Button"/Skin Color/Deck Color)
+	add - toggle VU Color to green ("Skin Button"/Skin Color/VU Color)
+	add - Master FX Controls on Center Master Panel ("Skin Button"/Center/Center Master)
+
+	change - Cuenumbers on Songpos Wave is now only in the Code, delete from png 
+________________________________________________________________________________
+Version 3.2.5 - 2022/07/19
+
+	Bugfix - Title & Author Deck right width on Variation 2 Extrabig Video
+	Bugfix - Cue Windows Color Daylight
+	Bugfix - many Position correctures	
+
+	add - Grid Adjust on Songinfos, rightclick on "BPM" or   ("Skin Button"/Deck Setup/Grid Adjust)
+	add - Cue Jump to Window "Cue Window ALL Deck"
+	add - new Color Sheme light grey 2 ("Skin Button"/Skin Color/light grey 2)
+	add - new Color Sheme dark grey 2 ("Skin Button"/Skin Color/dark grey 2)
+	add - Bars, Beat Counter on the "Center" Scratch Wave
+	add - little "+/-" Button (right bottom Corner) on Center "Scratch", change to Wave without Controls
+	add - Dimm Wave to the "Center" Scratch Wave ("Wave Button"/Wave Background/Dimm inactive Deck)	  
+
+	change - code optimize
+________________________________________________________________________________
+Version 3.2.4 - 2022/07/11
+
+	Bugfix - Barcounter
+
+	add - prelisten Play with Waveform ("Skin Button"/Browser/Prelisten Player design)
+	add - CUE Jump Mode 4 Jumps CUE 101-108 Manual in the Skin.ZIP Folder  ("Skin Button"/Deck Setup/Cue Jump Mode)
+	add - show CUE Jump Mode on HOTCUES or EFX Area
+	add - Quantize Button in the Top Zone
+	add - new Jog design ("Skin Button"/Skin Design/Jog design)
+	add - little changes
+
+	change - Rec Button on Top Zone right click goes to Record Settings, other visual when record is on
+
+	delete - DennYo Cue Action Mode CUE 2 to 3
+________________________________________________________________________________
+Version 3.2.3 - 2022/07/04
+
+	Bugfix - Custom Button Bar was not shown on 4 Deck swap move
+	Bugfix - Jog Color on the black Skin design	
+	Bugfix - Browser Fontsize now the Fontsize of the original Skin (I hear there was an Problem with the Browser Fontsize in combination with the Prime 4)
+
+	add - Dimm Wave of the inactive Deck / 4 Deck ("Wave Button"/Wave Background/Dimm inactive Deck)
+	add - EFX Knob Value always show ("Skin Button"/Skin Design/Knob Value EFX)
+	add - DennYo Cue Action Mode Manual in the ZIP Folder ("Skin Button"/Deck Setup/DennYo Cue Action Mode)
+	add - Custom Button Bar only Buttons 46 ("Skin Button"/Browser/- 46 Buttons)
+	add - Custom Button Bar only Buttons 23 ("Skin Button"/Browser/- 23 Buttons)
+	add - Additional Buttons on the Browsertoolbar (left) to show the Custombar & Prelisten ("Skin Button"/Browser/additional Buttons)
+
+	change - optimize the Code of the Browser
+	change - the Variables Support page is a Window now
+________________________________________________________________________________
+Version 3.2.2 - 2022/06/20
+
+	Bugfix - Deckborder can not hide
+	Bugfix - Half SongposWave on 4 Deck swap move
+	Bugfix - Deckborder on half SongposWave small Deck
+
+	add - new Knob design ("Skin Button"/Skin Design/Knob design)
+	add - new Fader design like my old skin ("Skin Button"/Skin Design/Fader design)
+
+	change - "Skin Button" new arrangement
+________________________________________________________________________________
+Version 3.2.1 - 2022/06/20
+
+	Bugfix - Songposition Wave was not correct display at the half view
+	Bugfix - Fullscreen with Taskbar
+	Bugfix - little changes
+
+	add - Songposition Wave has an new option to view full Wave an automatic half wave when a cue on the track ("Skin Button"/Songposition Wave/FullHalf Songposwave when Cue)
+	add - little changes
+________________________________________________________________________________
+Version 3.2.0 - 2022/06/14
+
+	add - redesign the light grey Color Scheme
+	add - WaveGrid Position move ("Wave Button"/Wave Grid Position/0 PX -1 PX -2 PX -3 PX)
+	add - new VU Meter design ("Skin Button"/Center/VU Meter design)
+	add - redesign and add missing Custom Icons
+	add - change to the VDJ Icons ("Skin Button"/Browser/Standard Icons)
+________________________________________________________________________________
+Version 3.1.9 - 2022/06/10
+
+	Bugfix - Deckborder Deck 4 bold wasn't visibles
+	Bugfix - little Bugfixes
+
+	add - Cue Number 9 to 24 on Songinfo Wave
+	add - Fader design ("Skin Button"/Center/Fader design)
+	add - redesign the black Color Scheme
+	add - Custom Buttons left and right on Veriation without Center ("Skin Button"/Center/Custom Button Center off)
+	add - new 4 Deck swap Variations ("Skin Button"/Variation/2 Deck big + 2 Deck small swap move & 2 Deck middle + 2 Deck small swap move)
+________________________________________________________________________________
+Version 3.1.8 - 2022/06/08
+
+	Bugfix - Wavegrid on 4 Deck Variation
+	Bugfix - little changes
+	Bugfix - Code optimized
+
+	add - two extra windows for CUE managment ("Skin Button"/Extra Windows/CUE Window All Deck & CUE Window One Deck)
+	add - 4 Deck wave order 3124 - swap ('@$wavesortauto20')	
+	add - new variation 4 deck big - split ("Skin Button"/Variation/4 Deck big - split)
+	add - you can toggle the 1/3 effect area to a scratchwave ("Skin Button"/Deck Setup/EffectsScratchwave)
+	add - you can toggle the effect area with the pad area ("Skin Button"/Deck Setup/toggle PAD and EFFECT Area)
+	add - Border around the Decks to show the left/right Deck ("Skin Button"/Deck Setup/Border leftright Deck)
+	add - automatic colorchange of the Jog left/right Deck select on controller. white left/right Deck dark not left/right Deck ("Skin Button"/Jog/Jog Color automatic leftright Deck)
+________________________________________________________________________________
+Version 3.1.7 - 2021/05/28 (not offical released)
+________________________________________________________________________________
+Version 3.1.6 - 2021/04/18
+
+	add - the browser can move to the top now ("Skin Button"/Variation/Browser on Top)
+	add - song remain timer on the small browser zoom decks
+	add - extra big font, this is optimize for screens with resolution 1366*768
+	add - beatcounter like VDJ Skin ("Skin Button"/Top Zone/change Beatcounter)
+________________________________________________________________________________
+Version 3.1.5 - 2020/07/09
+
+	-bugfix - add color change Artist/Title to the extra big layout
+________________________________________________________________________________
+Version 3.1.4 - 2020/07/09
+
+	-add - black color sheme
+	-add - you can change the text color Artist/Title by click on it
+________________________________________________________________________________
+Version 3.1.3 - 2020/07/07
+
+	-Bugfix - the jog color on the left deck (blue/yellow) wasn't invisible
+	-Bugfix - little changes
+
+	-add - the stems feature menu can activate by rightclick on the words "HI" MID" "LOW"
+	-add - you can change the color intensity of the deck border (master deck, select deck)("Skin Button"/Deck Setup/Border Color)
+	-add - you can hide the P.O.I., LOCK, SNAP, REC, SAVE, LOAD buttons ("Skin Button"/Deck Setup/Hide Buttons)
+	-add - you can hide the controlls on the Center layout SCRATCH and show only the waves ("Skin Button"/Center/Hide Controlls on Scratch)
+________________________________________________________________________________
+Version 3.1.2 - 2020/06/22
+
+	-add - the new stems feature
+	-add - toggle the HOTCUES to saved Loops ("Skin Button"/Deck Setup/HotCUEs/SaveLoops)
+________________________________________________________________________________
+Version 3.1.1 - 2020/06/04
+
+	-add - Browser mouse auto zoom
+	-add - custom panel 4cue/custom (only custom buttons, no knobs)
+________________________________________________________________________________
+Version 3.1.0 - 2020/06/04
+
+	-Bugfix - correct the variable cycle ('@$wavesort20') on the Variable Support Page
+
+	-add - the Filter Resonance setting to the round button over the Crossfader
+	-add - add an second square for the "big extra" on jog logo in the img.png 
+________________________________________________________________________________
+Version 3.0.9 - 2020/04/21
+
+	-Bugfix - many positions of the Browser Area was wrong
+
+	-add - you can now change the Artist/Title Info to scroll text ("Skin Button"/Deck Setup/Song Infos scroll)   
+________________________________________________________________________________
+Version 3.0.8
+
+	-Bugfix - Textsize of the Cue Buttons
+	-Bugfix - KEY move arrow in big deck Video was on the wrong position
+
+	-add - you can turn off the border arround the Song Infos Pitch/KEY/Gain/Rate ("Skin Button"/Deck ("Skin Button"/Deck Setup/Song Infos scroll) Song Infos)
+________________________________________________________________________________
+Version 3.0.7
+
+	 -add - KEY menu like the original Skin
+________________________________________________________________________________
+Version 3.0.6
+
+	-Bugfix - the Custom Buttons on toggle pad and cue area are visible, now
+________________________________________________________________________________
+Version 3.0.5
+
+	-Bugfix - the width of the right padbutton 2 on 2 deck middle extra corrected
+________________________________________________________________________________
+Version 3.0.4
+
+	-Bugfix - the Border around the select- or Master-Deck can deactivate, now
+	-Bugfix - the "Beat shadow" in the main wave is better visible on black wave background, now	
+	-Bugfix - add the '@$masterdeck20' variable to the VRIABLE SUPPORT PAGE
+
+	-add - extra big 2 Deck layout ("Skin Button"/Variation/2 Deck big extra)("Skin Button"/Variation/2 Deck middle extra)
+	-change - the Custombutton Bar Button names (you must set the actions new on all buttons)	 
+	-other - change all addition and subtraction to the result values in the skin.xml
+________________________________________________________________________________
+Version 3.0.3
+
+	-Bugfix - wrong scaling of the prelisten part on scale the skin to not 16:9 resolution
+	-Bugfix - the Songposition Wave can now always click to move the Song. No matter what setting.
+
+	-add - 24 Custombutton Bar in the top of the Browser ("Skin Button"/Browser/Custom Button Bar)
+	-add - toggle the Custombutton Bar in 24 or 44 buttons ("Skin Button"/Browser/24 44 Custom Button Bar)
+	-add - change the PAD and the CUE/Custom Area ("Skin Button"/Deck Setup/toggle PAD and CUE Area)
+	-add - prelistenplayer on the external Broserwindow
+	-add - change to a half Songposition Wave ("Skin Button"/Songposition Wave/full half Songposwave 
+	-add - Costum Logo on Jog. You can add your own Logo as Jog Background in the img.png. Please use texture alpha to save the img.png ("Skin Button"/Jog/JogLogo)
+________________________________________________________________________________
+Version 3.0.2
+
+	-show 3.0.3, 3.0.2 was an internal update
+________________________________________________________________________________
+Version 3.0.1
+
+	-Bugfix - Browsersize on 2bignopad2small large Wave
+	-Bugfix - Browsersize on 2bignopad2small large 1 Wave
+	-Bugfix - Settingsbutton was invisible on MAC
+	-Bugfix - Setting window closed after change to my skin (bug was only on MAC)
+
+	-add Skin color sheme dark grey
+	-add color FX on all Roundbuttons in the near of thr Filter knobs
+	-add MIX FX on all Roundbottons in the near of the Crossfaders
+	-add a orange border arrount the crossfader for visible MIX FX is on

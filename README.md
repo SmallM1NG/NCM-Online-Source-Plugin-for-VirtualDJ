@@ -10,10 +10,11 @@
 	<a href="https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ?color=brightgreen&label=Latest&style=for-the-badge"></a>
 	<img alt="C++20" src="https://img.shields.io/badge/C%2B%2B-20-00599C.svg?logo=cplusplus&logoColor=white&style=for-the-badge">
 	<img alt="Windows x64" src="https://img.shields.io/badge/Windows-x64-0078D6.svg?logo=windows&logoColor=white&style=for-the-badge">
-	<a href="https://cn.virtualdj.com/"><img alt="VirtualDJ Pro" src="https://img.shields.io/badge/VirtualDJ-Pro-FF6A00.svg?style=for-the-badge"></a>
+	<img alt="VirtualDJ Pro" src="https://img.shields.io/badge/VirtualDJ-Pro-FF6A00.svg?style=for-the-badge">
 	<a href="LICENSE"><img alt="License: GPLv3" src="https://img.shields.io/badge/License-GPLv3-red.svg?style=for-the-badge"></a>
 	<a href="https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ?style=for-the-badge"></a>
 </p>
+
 <p align="center">
 	<a href="#项目介绍">项目介绍</a>
 	·
@@ -21,8 +22,11 @@
 	·
 	<a href="#如何安装">如何安装</a>
 	·
+	<a href="#如何使用">如何使用</a>
+	·
 	<a href="#其他内容">其他内容</a>
 </p>
+
 <p align="center">
 	<a href="docs/md/SETTINGS.md">配置项详细说明</a>
 	·
@@ -36,19 +40,23 @@
 ---
 
 <a id="项目介绍"></a>
-## 项目介绍
+## 项目介绍 ℹ️
 
 NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Online Sources（在线源）** 的插件  
 用户可以在 VirtualDJ 中在线播放网易云音乐内的曲目 / 视频
 
-支持获取并作为列表展示用户的日推、喜欢、创建 / 收藏的歌单、创建 / 收藏的播客、收藏的专辑、视频  
-支持搜索，可被 VirtualDJ 中相关功能调用，例如 AI 提示 / 套曲推荐等  
-支持下载音频 / 视频至本地  
-内置插件设置面板，拥有丰富的可配置项
+支持获取并作为列表展示用户的 **日推、喜欢、创建 / 收藏的歌单、创建 / 收藏的播客、收藏的专辑、视频**  
+支持 **搜索**，可被 VirtualDJ 中相关功能调用，例如 **AI 提示 / 套曲推荐** 等  
+支持 **下载** 音频 / 视频至本地  
+内置 **插件设置面板**，拥有丰富的可配置项
 
 > 使用本项目时请务必遵守相关法律法规，尊重网易云音乐的服务条款
 
-<img alt="NCM OSP Hero" src="docs/imgs/hero.png" />
+> 使用过程中产生的任何问题均与作者无关，请自行承担风险
+
+> 本项目以 [GPLv3](LICENSE) 开源，使用、修改或分发时请遵守该协议
+
+---
 
 <a id="功能展示"></a>
 ## 功能展示 ✨
@@ -89,134 +97,225 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 	<img width="1024" src="docs/imgs/settings.webp" alt="设置面板">
 </div>
 
+---
+
 <a id="如何安装"></a>
 ## 如何安装 📥
 
-### 环境
+本插件仅支持 **Windows x64** 版本的 VirtualDJ，需拥有 **VirtualDJ Pro** 许可证才可使用（这是 VirtualDJ 的硬性要求）  
+获取对应音质 / 内容时需拥有网易云对应等级的 **VIP**，本插件不提供任何免费获取或绕过途径
 
-- Windows x64
-- [VirtualDJ](https://cn.virtualdj.com/) **Pro**（Online Sources 需要 Pro 授权）
-- 推荐 VirtualDJ 2025
+<ol>
+<li>
 
-### 发行包安装
+从 [Releases](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/releases/latest) 下载最新版本发行包
 
-1. 到 [Releases](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/releases/latest) 下载最新包
-2. 解压后把这些文件放到同一目录：
+</li>
+<li>
 
-```
-VirtualDJ\Plugins64\OnlineSources\
-├─ NeteaseCloudMusic.dll
-├─ ncm_api_server.exe
-└─ （首次运行后自动生成）
-    ├─ settings.json
-    ├─ ncm_user_data.json
-    ├─ ncm_user_avatar.jpg
-    └─ log.log
-```
+完全解压压缩包内的内容，应包含一个 **exe** 和一个 **dll** 文件
 
-常见插件目录：
+<p align="center">
+	<img width="242" src="docs/imgs/install-files.png" alt="解压后的 exe 与 dll">
+</p>
 
-- `%LOCALAPPDATA%\VirtualDJ\Plugins64\OnlineSources`
-- 或非系统盘 `X:\VirtualDJ\Plugins64\OnlineSources`
+</li>
+<li>
 
-3. 启动 VirtualDJ，展开 **Online Sources → NeteaseCloudMusic**
-4. 打开插件设置，点 **登录**，用网易云 App 扫码
-5. 在搜索齿轮里勾选 **NeteaseCloudMusic**，即可搜索
+将两个文件放入 VirtualDJ 数据目录的 **OnlineSources** 文件夹中
 
-升级时请先退出 VirtualDJ，覆盖 `dll` 与 `ncm_api_server.exe`。`settings.json` 与登录数据可保留；若行为异常，再删掉它们重新登录。
+2025 之前的版本，通常在 `C:\Users\用户名\Documents\VirtualDJ\Plugins64\OnlineSources`  
+2025 之后的版本，通常在 `C:\Users\用户名\AppData\Local\VirtualDJ\Plugins64\OnlineSources`  
+如果你更改了数据目录，请放入你自定义的数据目录内
 
-### 从源码编译
+<p align="center">
+	<img width="903" src="docs/imgs/install-folder.png" alt="放入 OnlineSources 文件夹">
+</p>
 
-仓库：[SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ)
+</li>
+<li>
 
-```
-├─ VirtualDJ_OnlineSource.slnx        Visual Studio 解决方案
-├─ Plugin/NeteaseCloudMusic/          当前插件源码 260905 v0.3.0
-├─ API Server/api-enhanced/           对 api-enhanced 的 VirtualDJ 补丁（不是完整上游仓库）
-├─ docs/
-│  ├─ imgs/                           README 配图
-│  └─ md/                             独立说明文档
-└─ Legacy/
-   ├─ v0.1.0/                         260331 v0.1
-   └─ v0.2.0/                         260420 v0.2
-```
+启动 VirtualDJ，在浏览窗左侧列表区域找到 **网络曲库**，即可看到 `NeteaseCloudMusic` 字样，则为安装成功
 
-- Visual Studio 2022 / 2026，工具集 `v145`，C++20
-- 配置 `Release | x64`
-- 静态链接：libcurl、jsoncpp、TagLib、zlib
-- 系统库：`ws2_32` `crypt32` `dwmapi` `uxtheme` `windowscodecs` 等
-- 输出为 `NeteaseCloudMusic.dll`，导出 `DllGetClassObject`
+<p align="center">
+	<img width="1024" src="docs/imgs/install-success.png" alt="安装成功后出现 NeteaseCloudMusic">
+</p>
 
-API 侧请先使用 [NeteaseCloudMusicAPI Enhanced](https://github.com/neteasecloudmusicapienhanced/api-enhanced)，再按 [`API Server/README.md`](API%20Server/README.md) 覆盖本仓库中的修改文件。历史发行版源码在 [`Legacy/v0.1.0`](Legacy/v0.1.0) 与 [`Legacy/v0.2.0`](Legacy/v0.2.0)。
+</li>
+</ol>
+
+---
+
+<a id="如何使用"></a>
+## 如何使用 ▶️
+
+<ol>
+<li>
+
+启动 VirtualDJ，在 **网络曲库** 中找到 `NeteaseCloudMusic` 项，右键点击，选择 **打开插件设置**
+
+<p align="center">
+	<img width="723" src="docs/imgs/usage-open-settings.png" alt="右键打开插件设置">
+</p>
+
+</li>
+<li>
+
+在顶部找到 **账户** 部分，点击 **登录**，在浏览器弹出的页面中使用网易云 App 扫码登录
+
+<p align="center">
+	<img width="687" src="docs/imgs/usage-login.png" alt="点击登录">
+</p>
+
+<p align="center">
+	<img width="480" src="docs/imgs/usage-qr.png" alt="浏览器扫码登录">
+</p>
+
+</li>
+<li>
+
+登录完成后关闭浏览器，可以在插件设置中看到所登录账户的信息，即为登录成功，即可开始使用
+
+<p align="center">
+	<img width="730" src="docs/imgs/usage-logged-in.png" alt="登录成功后的账户信息">
+</p>
+
+> 无需每次使用均重新登录账号。如果出现获取不到高音质 / 完整内容等问题，则为凭据过期，此时再退出登录、重新扫码登录即可恢复
+
+</li>
+<li>
+
+可以按需调整插件设置内的配置项，配置均为 **实时生效**
+
+> 变更 **内容 / 数量** 部分配置后，请点击 `NeteaseCloudMusic` 项折叠再展开，即可触发列表刷新
+
+</li>
+<li>
+
+点击浏览窗上方输入框附近的 **小齿轮**，按图中指示配置，即可使用搜索功能
+
+<p align="center">
+	<img width="1024" src="docs/imgs/usage-search-gear.png" alt="配置搜索功能">
+</p>
+
+</li>
+<li>
+
+左键点击浏览窗列表选中 `NeteaseCloudMusic` 项，在输入框中填写搜索关键词后按下回车即可，支持 **中文搜索**
+
+<p align="center">
+	<img width="1024" src="docs/imgs/usage-search.png" alt="选中后搜索">
+</p>
+
+> 可以在插件设置中选择搜索返回的类型，但只能同时选择一个
+
+> 支持直接粘贴分享链接（**不支持短链**），则会自动解析链接内容，链接仅支持这些类型
+
+| 类型 | 路径 |
+| --- | --- |
+| 单曲 | `/song` |
+| 节目 / 声音 | `/program`、`/dj` |
+| 电台 / 播客 | `/djradio`、`/radio` |
+| 歌单 / 榜单 | `/playlist`、`/toplist`、`/my/m/playlist` |
+| 专辑 | `/album` |
+| MV | `/mv` |
+| 视频 / mlog | `/video`、`/mlog` |
+
+例如 `https://music.163.com/song?id=2610839313`、`https://music.163.com/radio/?id=1003171484`
+
+</li>
+<li>
+
+插件设置中启用下载功能后，右键曲目 / 视频即可看到对应下载选项，点击即可下载到设置中指定的路径
+
+<p align="center">
+	<img width="1024" src="docs/imgs/usage-download.png" alt="右键下载曲目或视频">
+</p>
+
+> 选择的音质 / 分辨率均为可获得的上限，如没有则会自动降级返回
+
+> 下载后的文件会自动以 `artist - title.xxx` 命名，如获取出错则使用数字 / 英文唯一 ID 命名
+
+</li>
+<li>
+
+如遇到无法获取内容、登录页显示不出来等情况，请检查插件设置下方的 **API 服务状态** 是否在线。如不在线请尝试 **重启 API**，如无法启动请尝试更换端口
+
+<p align="center">
+	<img width="592" src="docs/imgs/usage-api-status.png" alt="API 服务状态与重启">
+</p>
+
+> 变更 API 相关配置需 **重启生效**
+
+</li>
+</ol>
+
+---
 
 <a id="其他内容"></a>
 ## 其他内容 📚
 
-配置、问答、原理和开发说明见下方独立文档：
-
-- [配置项详细说明](docs/md/SETTINGS.md)
-- [FAQ](docs/md/FAQ.md)
-- [如何工作](docs/md/HOW-IT-WORKS.md)
-- [开发相关](docs/md/DEVELOPMENT.md)
-
-### Architecture 🧩
-
-```
-VirtualDJ
-   │  IVdjPluginOnlineSource
-   ▼
-NeteaseCloudMusic.dll          Win32 深色设置窗 / 扫码登录 / 搜索 / 直链 / 下载
-   │  http://127.0.0.1:{port}
-   ▼
-ncm_api_server.exe             NeteaseCloudMusicAPI Enhanced
-   │  Job Object（VDJ 退出即杀）
-   ▼
-网易云音乐
-```
-
-插件加载时 `CreateProcess` 拉起 API，并把子进程放进 `KILL_ON_JOB_CLOSE` 作业对象；`Release()` 或 VirtualDJ 异常退出时，API 都不会残留。状态栏的 Online / Offline 只看进程是否还活着，不会拿 `/login/status` 轮询刷日志。
-
-### Contributing 💖
-
-欢迎 Issue、讨论和 Pull Request。反馈可走：
-
-- [GitHub Issues](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/issues)
-- [Bilibili](https://space.bilibili.com/475951038)
-
-请附上 `log.log`、VirtualDJ 版本、Windows 版本和复现步骤。不要在 Issue 里贴完整 Cookie。
-
-## Credits 🙌
-
-- [小小小小铭 / DJM1NG](https://space.bilibili.com/475951038) — 作者
-- [NeteaseCloudMusicAPI Enhanced](https://github.com/neteasecloudmusicapienhanced/api-enhanced) — 本地 API
-- [VirtualDJ Plugin SDK](https://cn.virtualdj.com/wiki/Developers.html) — Online Source 接口
-- 所有提出问题和试用的用户
-
-### Dependencies
-
-- [libcurl](https://curl.se/libcurl/)
-- [JsonCpp](https://github.com/open-source-parsers/jsoncpp)
-- [TagLib](https://taglib.org/)（MP3 ID3v2 / FLAC Picture）
-- [zlib](https://zlib.net/)
-- Windows：Win32、DWM Dark Mode、WIC、Job Object
-
-## Legacy 🗃️
-
-- [`Legacy/v0.1.0`](Legacy/v0.1.0)：260331 v0.1
-- [`Legacy/v0.2.0`](Legacy/v0.2.0)：260420 v0.2（独立 Python / PySide6 控制面板 + C++ 插件）
-
-那两版都需要先开控制面板再启动 VirtualDJ。当前 v0.3.0 已把登录、设置和 API 生命周期收进 DLL。
-
-## License 📄
-
-[GNU General Public License v3.0](LICENSE)
+<p align="center">
+	<a href="docs/md/SETTINGS.md">配置项详细说明</a>
+	·
+	<a href="docs/md/FAQ.md">FAQ</a>
+	·
+	<a href="docs/md/HOW-IT-WORKS.md">如何工作</a>
+	·
+	<a href="docs/md/DEVELOPMENT.md">开发相关</a>
+</p>
 
 ---
 
+### 补充说明 💡
+
+> 由于 API 服务默认自带 **2 分钟缓存**，同一个请求在两分钟之内不会重复返回，所以有时变更列表内条目可能不会很及时，稍等即可
+
+> 所有上限相关配置均为最大值，如没有则自动降级返回
+
+> 搜索的返回条目上限设置如果超过 **100** 或 **20**（类别为声音），可能会延迟返回内容，因为需要分页获取再整合推送
+
+> 如果在 VirtualDJ 中更改了某一曲目的 title / artist，下载功能不会使用修改后的值命名文件，因为无法获取到
+
+---
+
+### BUG 汇报 😨
+
+请详细描述遇到的问题：**具体行为**、是否可以复现，并提供 **VirtualDJ 版本**，以及插件运行目录下的 `log.log` 日志文件
+
+---
+
+### 鸣谢 🙌
+
+[NeteaseCloudMusicAPI Enhanced](https://github.com/neteasecloudmusicapienhanced/api-enhanced)  
+非常感谢此项目贡献者们
+
+还有为项目做测试的朋友们
+
+感谢你们的支持
+
+---
+
+### LINK 🔗
+
 <p align="center">
-	<a href="https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ">GitHub</a>
+	<a href="https://space.bilibili.com/475951038">BILIBILI</a>
 	·
-	<a href="https://space.bilibili.com/475951038">Bilibili</a>
-	·
-	<a href="https://cn.virtualdj.com/">VirtualDJ</a>
+	<a href="https://cn.virtualdj.com/wiki/Developers.html">VirtualDJ 开发者文档</a>
+</p>
+
+---
+
+### 捐赠 🧋
+
+<p align="center">
+	🥰请我喝奶茶喵 谢谢你喵🥰
+</p>
+
+<p align="center">
+	<img width="280" src="docs/imgs/qrcode.jpg" alt="请我喝奶茶">
+</p>
+
+<p align="center">
+	<small><font color="#ff69b4">哇 你居然看到这里了喵 感谢你看完我辛苦写的 README 喵 偷偷给你发一个小<a href="docs/skins">彩蛋</a>喵 😋</font></small>
 </p>

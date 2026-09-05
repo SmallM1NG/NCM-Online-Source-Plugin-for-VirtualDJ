@@ -1,0 +1,218 @@
+<skin
+ name="Controller 2020 by DennYo"
+ version="2023"
+ width="1920"
+ height="1080"
+ comment="Version 3.4.4 - 2024-04-11"
+ image="lock.png"
+ author="DennYo © paypal.me/dennyo88"
+ preview="prev.png"
+ breakline="1079"
+ breakline2="1080"
+ hidden="true"
+>
+<copyright>DennYo - Denny Floeter - ©2023</copyright>
+<font name="Arial"/>
+<nbdecks value="2" condition="var_equal '@$4decks20' 0 && var_not_equal '@$variation20' 14"/>
+<nbdecks value="4" condition="var_not_equal '@$4decks20' 0 && var_not_equal '@$variation20' 14"/>
+<nbdecks value="1" condition="var_equal '@$variation20' 14"/>
+<background x="0" y="0" width="1920" height="1080" color="#292A2D" repeat="false" condition="var_equal '@$day20' 0"/>
+<background x="0" y="0" width="1920" height="1080" color="#D6D6D6" repeat="false" condition="var_equal '@$day20' 1"/>
+<background x="0" y="0" width="1920" height="1080" color="#1A1A1A" repeat="false" condition="var_equal '@$day20' 2"/>
+<background x="0" y="0" width="1920" height="1080" color="#000000" repeat="false" condition="var_equal '@$day20' 3"/>
+<background x="0" y="0" width="1920" height="1080" color="#494949" repeat="false" condition="var_equal '@$day20' 4"/>
+<background x="0" y="0" width="1920" height="1080" color="#191919" repeat="false" condition="var_equal '@$day20' 5"/>
+<onexit action="wait 500ms & load_skin ':lock' ? notihng : load_skin ':skin' ? nothing : deck all repeat_stop 'loadnextplay' & deck all repeat_stop 'prev' & deck all repeat_stop 'repeatsong'"/>
+<grabzone>
+    <pos x="0" y="0"/>
+    <size width="1920" height="1080"/>
+</grabzone>
+<button action="load_skin ':skin'" visibility="var_equal '@$lockenabled20' 0" tooltip="click to go back to the Skin">
+	<pos x="0" y="0"/>
+	<size width="1920" height="1080"/>
+</button>
+<resizezone>
+    <pos x="1918" y="0"/>
+    <size width="2" height="1080"/>
+</resizezone>
+<resizezone>
+    <pos x="1915" y="1075"/>
+    <size width="5" height="5"/>
+</resizezone>
+<visual>
+    <size width="1920" height="1078"/>
+    <off x="0" y="0"/>
+</visual>
+<panel visible="is_pc">
+    <logo>
+        <pos x="6" y="6"/>
+        <size width="108" height="23"/>
+    </logo>
+    <button action="set '$unlock' 1">
+        <pos x="78" y="6"/>
+        <size width="23" height="23"/>
+    </button>
+    <button action="var_equal '$unlock' 1 ? set '$unlock' 2 : set '$unlock' 0">
+        <pos x="6" y="6"/>
+        <size width="23" height="23"/>
+    </button>
+    <button action="var_equal '$unlock' 2 ? load_skin ':skin' & wait 1000ms & set '$unlock' 0 : set '$unlock' 0">
+        <pos x="30" y="6"/>
+        <size width="47" height="23"/>
+    </button>
+    <panel visible="var_equal '$lockhint' 0">
+        <button action="set '$unlock' 1">
+            <pos x="78" y="6"/>
+            <size width="23" height="23"/>
+            <off color="red"/>
+        </button>
+        <button action="var_equal '$unlock' 1 ? set '$unlock' 2 : set '$unlock' 0">
+            <pos x="6" y="6"/>
+            <size width="23" height="23"/>
+            <off color="yellow"/>
+        </button>
+        <button action="var_equal '$unlock' 2 ? load_skin ':skin' & wait 1000ms & set '$unlock' 0 : set '$unlock' 0">
+            <pos x="29" y="6"/>
+            <size width="49" height="23"/>
+            <off color="darkgreen"/>
+        </button>
+        <textzone group="vertical" align="center">
+            <pos x="81" y="32"/>
+            <size width="23" height="30"/>
+            <text fontsize="12" color="red" text="^"/>
+            <text fontsize="12" color="red" text="1."/>
+        </textzone>
+        <textzone group="vertical" align="center">
+            <pos x="9" y="32"/>
+            <size width="23" height="30"/>
+            <text fontsize="12" color="yellow" text="^"/>
+            <text fontsize="12" color="yellow" text="2."/>
+        </textzone>
+        <textzone group="vertical" align="center">
+            <pos x="33" y="32"/>
+            <size width="47" height="30"/>
+            <text fontsize="12" color="darkgreen" text="^"/>
+            <text fontsize="12" color="darkgreen" text="3."/>
+        </textzone>
+        <button align="center" action="set '$lockhint' 1">
+            <pos x="18" y="74"/>
+            <size width="71" height="20"/>
+            <off color="#292A2D" shape="square" border="#6E8092" border_size="1" radius="4"/>
+            <over color="#484A4D" shape="square" border="#6E8092" border_size="1" radius="4"/>
+            <text fontsize="11" weight="bold" color="#cdcdcd" align="center" format="HIDE HINT"/>
+        </button>
+        <textzone group="horizontal" align="left">
+            <pos x="9" y="98"/>
+            <size width="200" height="30"/>
+            <text fontsize="12" color="#888888" text="You need 3 clicks to unlock"/>
+        </textzone>
+        <textzone group="horizontal" align="left">
+            <pos x="9" y="115"/>
+            <size width="200" height="30"/>
+            <text fontsize="12" color="#888888" text="1. click on DJ ("/>
+            <text fontsize="12" color="red" text=" RED "/>
+            <text fontsize="12" color="#888888" text="area )"/>
+        </textzone>
+        <textzone group="horizontal" align="left">
+            <pos x="9" y="132"/>
+            <size width="200" height="30"/>
+            <text fontsize="12" color="#888888" text="2. click on VI ("/>
+            <text fontsize="12" color="yellow" text=" YELLOW "/>
+            <text fontsize="12" color="#888888" text="area )"/>
+        </textzone>
+        <textzone group="horizontal" align="left">
+            <pos x="9" y="149"/>
+            <size width="200" height="30"/>
+            <text fontsize="12" color="#888888" text="3. click on RTUAL ("/>
+            <text fontsize="12" color="darkgreen" text=" GREEN "/>
+            <text fontsize="12" color="#888888" text="area )"/>
+        </textzone>
+    </panel>
+</panel>
+<panel visible="is_mac">
+    <logo>
+        <pos x="1816" y="6"/>
+        <size width="108" height="23"/>
+    </logo>
+    <button action="set '$unlock' 1">
+        <pos x="1888" y="6"/>
+        <size width="23" height="23"/>
+    </button>
+    <button action="var_equal '$unlock' 1 ? set '$unlock' 2 : set '$unlock' 0">
+        <pos x="1816" y="6"/>
+        <size width="23" height="23"/>
+    </button>
+    <button action="var_equal '$unlock' 2 ? load_skin ':skin' & wait 1000ms & set '$unlock' 0 : set '$unlock' 0">
+        <pos x="1840" y="6"/>
+        <size width="47" height="23"/>
+    </button>
+    <panel visible="var_equal '$lockhint' 0">
+        <button action="set '$unlock' 1">
+            <pos x="1888" y="6"/>
+            <size width="23" height="23"/>
+            <off color="red"/>
+        </button>
+        <button action="var_equal '$unlock' 1 ? set '$unlock' 2 : set '$unlock' 0">
+            <pos x="1816" y="6"/>
+            <size width="23" height="23"/>
+            <off color="yellow"/>
+        </button>
+        <button action="var_equal '$unlock' 2 ? load_skin ':skin' & wait 1000ms & set '$unlock' 0 : set '$unlock' 0">
+            <pos x="1839" y="6"/>
+            <size width="49" height="23"/>
+            <off color="darkgreen"/>
+        </button>
+        <textzone group="vertical" align="center">
+            <pos x="1891" y="32"/>
+            <size width="23" height="30"/>
+            <text fontsize="12" color="red" text="^"/>
+            <text fontsize="12" color="red" text="1."/>
+        </textzone>
+        <textzone group="vertical" align="center">
+            <pos x="1819" y="32"/>
+            <size width="23" height="30"/>
+            <text fontsize="12" color="yellow" text="^"/>
+            <text fontsize="12" color="yellow" text="2."/>
+        </textzone>
+        <textzone group="vertical" align="center">
+            <pos x="1843" y="32"/>
+            <size width="47" height="30"/>
+            <text fontsize="12" color="darkgreen" text="^"/>
+            <text fontsize="12" color="darkgreen" text="3."/>
+        </textzone>
+        <button align="center" action="set '$lockhint' 1">
+            <pos x="1831" y="74"/>
+            <size width="71" height="20"/>
+            <off color="#292A2D" shape="square" border="#6E8092" border_size="1" radius="4"/>
+            <over color="#484A4D" shape="square" border="#6E8092" border_size="1" radius="4"/>
+            <text fontsize="11" weight="bold" color="#cdcdcd" align="center" format="HIDE HINT"/>
+        </button>
+        <textzone group="horizontal" align="right">
+            <pos x="1711" y="98"/>
+            <size width="200" height="30"/>
+            <text fontsize="12" color="#888888" text="You need 3 clicks to unlock"/>
+        </textzone>
+        <textzone group="horizontal" align="right">
+            <pos x="1711" y="115"/>
+            <size width="200" height="30"/>
+            <text fontsize="12" color="#888888" text="1. click on DJ ("/>
+            <text fontsize="12" color="red" text=" RED "/>
+            <text fontsize="12" color="#888888" text="area )"/>
+        </textzone>
+        <textzone group="horizontal" align="right">
+            <pos x="1711" y="132"/>
+            <size width="200" height="30"/>
+            <text fontsize="12" color="#888888" text="2. click on VI ("/>
+            <text fontsize="12" color="yellow" text=" YELLOW "/>
+            <text fontsize="12" color="#888888" text="area )"/>
+        </textzone>
+        <textzone group="horizontal" align="right">
+            <pos x="1711" y="149"/>
+            <size width="200" height="30"/>
+            <text fontsize="12" color="#888888" text="3. click on RTUAL ("/>
+            <text fontsize="12" color="darkgreen" text=" GREEN "/>
+            <text fontsize="12" color="#888888" text="area )"/>
+        </textzone>
+    </panel>
+</panel>
+</Skin>
