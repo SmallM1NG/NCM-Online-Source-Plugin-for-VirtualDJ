@@ -108,7 +108,7 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 <ol>
 <li>
 
-从 [Releases](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/releases/latest) 下载最新版本发行包
+从 [Releases](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/releases/latest) 下载最新版本发行包（当前为 [v0.3.0](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/releases/tag/v0.3.0)）
 
 </li>
 <li>
@@ -313,7 +313,7 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 </p>
 
 <p align="center">
-	<img width="280" src="docs/imgs/qrcode.jpg" alt="请我喝奶茶">
+	<img width="420" src="docs/imgs/qrcode.jpg" alt="请我喝奶茶">
 </p>
 
 <p align="center">
