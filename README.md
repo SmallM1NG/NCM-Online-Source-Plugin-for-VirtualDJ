@@ -202,9 +202,10 @@ VirtualDJ\Plugins64\OnlineSources\
 仓库：[SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ)
 
 ```
-├─ Plugin/                            当前插件源码 260905 v0.3.0（NeteaseCloudMusic.dll）
+├─ Plugin/
+│  ├─ VirtualDJ_OnlineSource.slnx     Visual Studio 解决方案
+│  └─ NeteaseCloudMusic/              当前插件源码 260905 v0.3.0
 ├─ API Server/api-enhanced/           对 api-enhanced 的 VirtualDJ 补丁（不是完整上游仓库）
-├─ VirtualDJ_OnlineSource.slnx
 ├─ docs/img/                          README 配图
 └─ Legacy/
    ├─ v0.1.0/                         260331 v0.1
