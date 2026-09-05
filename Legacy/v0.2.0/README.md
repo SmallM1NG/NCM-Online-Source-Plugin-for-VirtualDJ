@@ -1,13 +1,13 @@
-[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/top_1.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/top_1.png)
+[![](img/top_1.png)](img/top_1.png)
 
 # ℹ️项目简介 
  * **项目名称**：NCM-Online-Source-Plugin-for-VirtualDJ
  * **我知道他很长 所以简称 NCM OSP (NCM在线源插件)**
  * **开发者**：小小小小铭 Aka DJM1NG
- * **开源协议**：[GPLv3 ](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/LICENSE "GPLv3 ")
+ * **开源协议**：[GPLv3 ](../../LICENSE "GPLv3 ")
  * **版本**：260420 v0.2
 
-[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)
+[![](img/1.png)](img/1.png)
 
 ## 😙这是一个可以让你的VirtualDJ使用网易云曲库的插件
 ## 由插件本体和控制面板组成 高度集成于VirtualDJ
@@ -35,7 +35,7 @@
 ### 下载后 完全解压压缩包 至同一目录
 ### 运行控制面板 (Control Panel)
 ### 控制面板中内置了使用教程
-### 当然也可点击 [使用教程](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/USER%20GUIDE.md "使用教程") [FAQ](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/FAQ.md "FAQ") 查看
+### 当然也可点击 [使用教程](USER%20GUIDE.md "使用教程") [FAQ](FAQ.md "FAQ") 查看
 
 -----
 
@@ -54,4 +54,4 @@
 
 -----
 # 🥰请我喝奶茶
-[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/qrcode.jpg)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/qrcode.jpg)
+[![](img/qrcode.jpg)](img/qrcode.jpg)

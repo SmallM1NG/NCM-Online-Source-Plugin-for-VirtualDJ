@@ -9,7 +9,7 @@
 
 > 使用本插件请务必遵守相关法律法规，尊重网易云音乐服务条款。
 
-[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/1.png)
+[![](img/1.png)](img/1.png)
 
 ---
 
@@ -21,7 +21,7 @@
 * **系统盘 (C盘)**: `C:\Users\username\AppData\Local\VirtualDJ`
 * **非系统盘**: 对应盘符根目录下的 `\VirtualDJ` 文件夹（例如 `D:\VirtualDJ` 或 `E:\VirtualDJ`）
 
-[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/2.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/2.png)
+[![](img/2.png)](img/2.png)
 
 ---
 
@@ -31,7 +31,7 @@
 2. 点击顶部 **[启动服务]** 按钮，等待地址旁状态显示为 **运行中**。
 3. 启动后可点击 **[服务地址]**，如弹出状态页则代表服务正常工作。
 
-[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/3.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/3.png)
+[![](img/3.png)](img/3.png)
 
 ---
 
@@ -41,7 +41,7 @@
 2. 按照对应的操作流程授权登录。
 3. 授权成功后，若能加载您的 **用户头像昵称等**，即代表登录成功。
 
-[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/4.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/4.png)
+[![](img/4.png)](img/4.png)
 
 ---
 
@@ -55,7 +55,7 @@
 * 不需要每次使用插件都重新生成 Cookie 和 UserData。
 * 如您发现无法获取到 **完整歌曲或高音质格式** 等，则代表信息过期，此时才需要重新登录并生成。
 
-[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/5.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/5.png)
+[![](img/5.png)](img/5.png)
 
 ---
 
@@ -65,7 +65,7 @@
 2. 在左侧浏览窗找到 **网络曲库 (Online Sources)** 分类点击展开。
 3. 找到 **NeteaseCloudMusic** 目录并点击，即可加载歌单数据。
 
-[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/6.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/6.png)
+[![](img/6.png)](img/6.png)
 
 ---
 
@@ -76,4 +76,4 @@
 * 下载操作不会弹出提示，请前往预设的下载路径查看文件。
 * 下载后的文件会自动根据偏好设置项写入 Tag 信息。
 
-[![](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/7.png)](https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/blob/main/img/7.png)
+[![](img/7.png)](img/7.png)
