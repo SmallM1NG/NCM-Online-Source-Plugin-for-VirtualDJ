@@ -1,0 +1,34 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.aps
+*.VC.db
+*.VC.opendb
+
+# Build outputs
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+**/x64/
+**/*.obj
+**/*.pdb
+**/*.ilk
+**/*.iobj
+**/*.ipdb
+**/*.tlog
+**/*.recipe
+**/*.log
+*.obj.dt.d.json
+*.obj.dt.module.json
+
+# Bundled API binary (too large for git; ship with Releases)
+**/ncm_api_server.exe
+
+# Local plugin runtime files
+settings.json
+ncm_user_data.json
+ncm_user_avatar.jpg
+log.log

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>网易云音乐二维码登录</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh; padding: 20px; display: flex; align-items: center; justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      background: #151515; color: #ededed;
+    }
+    .container {
+      width: 100%; max-width: 450px; padding: 42px 38px; text-align: center;
+      background: #242424; border: 1px solid #3a3a3a; border-radius: 0;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, .38);
+    }
+    h1 { margin-bottom: 8px; font-size: 24px; font-weight: 600; }
+    .subtitle { margin-bottom: 28px; color: #aaa; font-size: 14px; }
+    .qr-wrapper { display: inline-block; margin-bottom: 20px; padding: 14px; background: #fff; border-radius: 0; }
+    #qrImg { display: block; width: 220px; height: 220px; }
+    .status { margin-top: 4px; padding: 12px; border: 1px solid #4b4b4b; border-radius: 0; background: #303030; color: #e5b85c; font-size: 14px; font-weight: 500; }
+    .status.success { border-color: #2c7550; background: #193b2a; color: #75d99d; }
+    .status.error { border-color: #803636; background: #462020; color: #ff9a9a; }
+    .hint { margin-top: 18px; color: #999; font-size: 13px; line-height: 1.6; }
+    button { margin-top: 20px; padding: 9px 18px; border: 0; border-radius: 0; background: #414141; color: #eee; font-size: 14px; cursor: pointer; }
+    button:hover { background: #555; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>网易云音乐登录</h1>
+    <p class="subtitle">二维码登录</p>
+    <div class="qr-wrapper"><img id="qrImg" src="" alt="二维码加载中..." /></div>
+    <div id="status" class="status">正在加载二维码...</div>
+    <p class="hint">请打开网易云音乐 App，扫描上方二维码并在手机上确认登录。</p>
+    <button id="refreshQr" type="button">刷新二维码</button>
+  </main>
+  <script>
+    const session = new URLSearchParams(location.search).get('session')
+    const qrImg = document.getElementById('qrImg')
+    const statusEl = document.getElementById('status')
+    let timer = null
+
+    function updateStatus(text, type = '') {
+      statusEl.textContent = text
+      statusEl.className = `status ${type}`
+    }
+    async function api(url, options) {
+      const response = await fetch(url, options)
+      if (!response.ok) throw new Error('本地服务请求失败')
+      return response.json()
+    }
+    async function complete(cookie) {
+      if (!cookie) throw new Error('登录成功但未获取到登录凭据')
+      await api('/virtualdj_plugin/login/complete', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ session, cookie }),
+      })
+      updateStatus('登录成功，可以关闭此页面', 'success')
+      clearInterval(timer)
+    }
+    async function startLogin() {
+      clearInterval(timer)
+      if (!session) { updateStatus('登录会话无效，请从插件重新打开此页面', 'error'); return }
+      try {
+        updateStatus('正在加载二维码...')
+        const keyResult = await api(`/login/qr/key?timestamp=${Date.now()}`)
+        const key = keyResult.data && keyResult.data.unikey
+        if (!key) throw new Error('二维码密钥生成失败')
+        const qrResult = await api(`/login/qr/create?key=${encodeURIComponent(key)}&platform=web&qrimg=true&timestamp=${Date.now()}&ua=pc`)
+        if (!qrResult.data || !qrResult.data.qrimg) throw new Error('二维码生成失败')
+        qrImg.src = qrResult.data.qrimg
+        updateStatus('等待手机扫码...')
+        timer = setInterval(async () => {
+          try {
+            const result = await api(`/login/qr/check?key=${encodeURIComponent(key)}&timestamp=${Date.now()}&ua=pc&noCookie=true`)
+            if (result.code === 800) { clearInterval(timer); updateStatus('二维码已过期，请点击刷新二维码', 'error') }
+            else if (result.code === 802) updateStatus('已扫码，请在手机上确认登录')
+            else if (result.code === 803) await complete(result.cookie)
+            else updateStatus('等待手机扫码...')
+          } catch (_) { updateStatus('登录状态检查失败，请刷新二维码', 'error') }
+        }, 1000)
+      } catch (error) {
+        updateStatus(error.message || '二维码加载失败，请刷新二维码重试', 'error')
+      }
+    }
+    document.getElementById('refreshQr').addEventListener('click', startLogin)
+    startLogin()
+  </script>
+</body>
+</html>
