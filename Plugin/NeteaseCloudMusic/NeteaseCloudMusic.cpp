@@ -130,6 +130,48 @@ static string JsonId(const Json::Value& obj, const char* key) {
     return JsonId(obj[key]);
 }
 
+// jsoncpp 的 asInt/asString 在类型不符或值为 null 时会抛异常；下载线程里未捕获就会把 VDJ 一起干掉
+static string JsonStr(const Json::Value& v) {
+    if (v.isNull() || v.isObject() || v.isArray()) return {};
+    try { return v.asString(); }
+    catch (...) { return {}; }
+}
+static string JsonStr(const Json::Value& obj, const char* key) {
+    return obj.isObject() ? JsonStr(obj[key]) : string{};
+}
+static int JsonIntLoose(const Json::Value& v, int fallback) {
+    try {
+        if (v.isInt()) return v.asInt();
+        if (v.isUInt()) return (int)v.asUInt();
+        if (v.isDouble()) return (int)v.asDouble();
+        if (v.isString()) return stoi(v.asString());
+    }
+    catch (...) {}
+    return fallback;
+}
+
+// 从 /mv/url 或 /video/url 的 JSON 里取出第一条可用直链和实际清晰度
+static bool ExtractMvDownloadUrl(const Json::Value& root, string& url, int& quality) {
+    if (!root["data"]["url"].isString()) return false;
+    url = root["data"]["url"].asString();
+    if (url.empty()) return false;
+    quality = JsonIntLoose(root["data"]["r"], quality);
+    return true;
+}
+static bool ExtractVideoDownloadUrl(const Json::Value& root, string& url, int& quality) {
+    const Json::Value& urls = root["urls"];
+    if (!urls.isArray()) return false;
+    for (const auto& item : urls) {
+        if (!item["url"].isString()) continue;
+        string u = item["url"].asString();
+        if (u.empty()) continue;
+        url = u;
+        quality = JsonIntLoose(item["r"], quality);
+        return true;
+    }
+    return false;
+}
+
 // 把艺人/创作者数组拼成逗号分隔的名字
 static string JoinNameList(const Json::Value& arr, const char* key1, const char* key2) {
     string out;
@@ -1454,8 +1496,8 @@ HRESULT VDJ_API CNeteaseCloud::GetFolderContextMenu(const char* folderUniqueId, 
         contextMenu->add("打开插件设置");
         contextMenu->add("打开配置文件");
         contextMenu->add("打开日志文件");
-        contextMenu->add("打开插件安装目录");
-        contextMenu->add("打开曲目下载目录");
+        contextMenu->add("打开插件目录");
+        contextMenu->add("打开下载目录");
     }
 
     return S_OK;
@@ -1525,96 +1567,25 @@ HRESULT VDJ_API CNeteaseCloud::OnContextMenu(const char* id, size_t i) {
     const bool isVideo = fullId.find("NCM_NORMAL_VIDEO_") == 0 ||
         fullId.find("NCM_MUSIC_VIDEO_") == 0;
     if (isVideo ? !config.enableVideoDownload : !config.enableTrackDownload) return S_OK;
-    string title, artist, downloadId, picUrl; // 增加 picUrl 存储
-    bool isPodcast = false;
-
-    // --- 分支 A: 普通歌曲 ---
+    // 右键只负责分流；详情请求和文件下载都放到后台线程，避免卡住 VirtualDJ
     if (fullId.find("NCM_NORMAL_TRACK_") == 0) {
-        downloadId = fullId.substr(17);
-        string res = HttpGet(ApiBase + "/song/detail?ids=" + downloadId);
-        Json::Value root;
-        if (Json::Reader().parse(res, root) && root["songs"].size() > 0) {
-            title = root["songs"][0]["name"].asString();
-            picUrl = root["songs"][0]["al"]["picUrl"].asString(); // 封面 URL
-
-            // ------------------------------------------------------------------
-            // 功能（暂未启用，仅注释占位，随 AddTrack 的 tns 一并启用）：
-            //   下载普通歌曲时，文件名也希望包含歌对象顶层 tns（灰色后缀，如 “普通话版”），
-            //   变成  artist - title (普通话版).ext。
-            //   只应读 root["songs"][0]["tns"]（顶层数组），不要拿 ar[].tns(艺名翻译) / al.tns。
-            //   启用方式：放开下面整段。
-            /* 待启用
-            {
-                const Json::Value& tnsArr = root["songs"][0]["tns"];
-                if (tnsArr.isArray()) {
-                    for (const auto& t : tnsArr) {
-                        std::string suffix = t.asString();
-                        if (suffix.empty()) continue;
-                        if (title.find(suffix) == std::string::npos) {
-                            title += " (" + suffix + ")";
-                        }
-                    }
-                }
-            }
-            待启用结束 */
-
-            for (auto& a : root["songs"][0]["ar"]) {
-                if (!artist.empty()) artist += ",";
-                artist += a["name"].asString();
-            }
-            WriteLog("[DL][NORMAL] 普通歌曲解析成功: " + artist + " - " + title);
-        }
+        DownloadSong(fullId.substr(17), false);
+        return S_OK;
     }
-    // --- 分支 B: 播客节目 ---
-    else if (fullId.find("NCM_PODCAST_TRACK_") == 0) {
-        isPodcast = true;
-        string programId = fullId.substr(18); // 这里的 programId 用于生成详情页链接
-        string res = HttpGet(ApiBase + "/dj/program/detail?id=" + programId);
-        Json::Value root;
-        if (Json::Reader().parse(res, root)) {
-            string rawTitle = root["program"]["name"].asString();
-            string rawArtist = root["program"]["dj"]["nickname"].asString();
-
-            // 检测切分开关
-            if (config.splitPodcastTitle) {
-                size_t pos = rawTitle.find(" - ");
-                if (pos != string::npos) {
-                    artist = rawTitle.substr(0, pos);          // AAA 部分作为作者
-                    title = rawTitle.substr(pos + 3);          // BBB 部分作为标题
-                }
-                else {
-                    title = rawTitle;
-                    artist = rawArtist;
-                }
-            }
-            else {
-                title = rawTitle;
-                artist = rawArtist;
-            }
-
-            picUrl = PodcastCoverFromProgram(root["program"]); // 封面 URL（节目图优先）
-            downloadId = programId; // 传出 programId
-            WriteLog("[DL][PODCAST] 播客节目解析成功: " + artist + " - " + title);
-        }
+    if (fullId.find("NCM_PODCAST_TRACK_") == 0) {
+        DownloadSong(fullId.substr(18), true);
+        return S_OK;
     }
-    // --- 分支 C: 普通视频 ---
-    else if (fullId.find("NCM_NORMAL_VIDEO_") == 0) {
+    if (fullId.find("NCM_NORMAL_VIDEO_") == 0) {
         DownloadVideo(fullId.substr(17), false);
         return S_OK;
     }
-    // --- 分支 D: MV ---
-    else if (fullId.find("NCM_MUSIC_VIDEO_") == 0) {
+    if (fullId.find("NCM_MUSIC_VIDEO_") == 0) {
         DownloadVideo(fullId.substr(16), true);
         return S_OK;
     }
 
-    // 提交下载
-    if (!downloadId.empty() && !title.empty()) {
-        DownloadSong(downloadId, artist, title, isPodcast, picUrl);
-    }
-    else {
-        WriteLog("[DL][ERROR] 解析失败，无法开始任务。ID: " + fullId);
-    }
+    WriteLog("[DL][ERROR] 无法识别曲目类型，ID: " + fullId);
     return S_OK;
 }
 
@@ -1622,168 +1593,259 @@ HRESULT VDJ_API CNeteaseCloud::OnContextMenu(const char* id, size_t i) {
 
 
 void CNeteaseCloud::DownloadVideo(const string& videoId, bool isMusicVideo) {
-    std::thread([this, videoId, isMusicVideo]() {
-        const string logTag = isMusicVideo ? "[DL][MV] " : "[DL][VIDEO] ";
-        string title, creator;
-        const string detailUrl = isMusicVideo
-            ? ApiBase + "/mv/detail?mvid=" + videoId
-            : ApiBase + "/video/detail?id=" + videoId;
-        string detailResponse = HttpGet(detailUrl);
-        Json::Value detailRoot;
-        if (Json::Reader().parse(detailResponse, detailRoot) && detailRoot["data"].isObject()) {
-            const Json::Value& detail = detailRoot["data"];
-            title = isMusicVideo ? detail.get("name", "").asString()
-                                 : detail.get("title", "").asString();
-            const Json::Value& creators = isMusicVideo ? detail["artists"] : detail["creator"];
-            for (const auto& item : creators) {
-                if (!creator.empty()) creator += ",";
-                creator += isMusicVideo ? item.get("name", "").asString()
-                                        : item.get("userName", "").asString();
+    // 进线程前拷走端口、清晰度和保存路径，避免下载过程中配置被改、或 API 被重启后读到空基址
+    const string apiBase = ApiBase;
+    const int wantQuality = config.maxVideoDownloadQuality;
+    const string saveDir = config.downloadPath;
+    std::thread([this, videoId, isMusicVideo, apiBase, wantQuality, saveDir]() {
+        string logTag = isMusicVideo ? "[DL][MV] " : "[DL][VIDEO] ";
+        try {
+            if (shuttingDown.load()) return;
+            bool treatAsMv = isMusicVideo;
+            string title, creator;
+
+            auto readDetail = [&](bool mv, const string& body) -> bool {
+                Json::Value root;
+                if (!Json::Reader().parse(body, root) || !root["data"].isObject()) return false;
+                const Json::Value& d = root["data"];
+                if (mv) {
+                    title = JsonStr(d, "name");
+                    creator = JoinNameList(d["artists"], "name", "name");
+                } else {
+                    title = JsonStr(d, "title");
+                    creator = JoinNameList(d["creator"], "userName", "nickname");
+                    if (creator.empty()) creator = JsonStr(d["creator"], "nickname");
+                }
+                return !title.empty() || !creator.empty();
+            };
+
+            // 普通视频详情的 creator 是单个对象，不是数组；按数组 for 会触发 jsoncpp 断言，VDJ 直接崩。
+            // 搜索/链接有时还会把纯数字 MV 标成 NCM_NORMAL_VIDEO_，详情失败时改走另一套接口。
+            string detailBody = HttpGet(treatAsMv
+                ? apiBase + "/mv/detail?mvid=" + videoId
+                : apiBase + "/video/detail?id=" + videoId);
+            if (!readDetail(treatAsMv, detailBody)) {
+                const bool otherIsMv = !treatAsMv;
+                string otherBody = HttpGet(otherIsMv
+                    ? apiBase + "/mv/detail?mvid=" + videoId
+                    : apiBase + "/video/detail?id=" + videoId);
+                if (readDetail(otherIsMv, otherBody)) {
+                    treatAsMv = otherIsMv;
+                    logTag = treatAsMv ? "[DL][MV] " : "[DL][VIDEO] ";
+                    WriteLog(logTag + "已按" + string(treatAsMv ? "MV" : "视频") + "接口重新识别，ID：" + videoId);
+                } else {
+                    WriteLog(logTag + "视频详情读取失败，将使用 ID 作为文件名：" + videoId);
+                }
             }
-        } else {
-            WriteLog(logTag + "视频详情读取失败，将使用 ID 作为文件名：" + videoId);
-        }
-        if (title.empty()) title = videoId;
+            if (title.empty()) title = videoId;
 
-        const string streamApi = isMusicVideo
-            ? ApiBase + "/mv/url?id=" + videoId + "&r=" + to_string(config.maxVideoDownloadQuality)
-            : ApiBase + "/video/url?id=" + videoId + "&res=" + to_string(config.maxVideoDownloadQuality);
-        string streamResponse = HttpGet(streamApi);
-        Json::Value streamRoot;
-        string downloadUrl;
-        int actualQuality = config.maxVideoDownloadQuality;
-        if (Json::Reader().parse(streamResponse, streamRoot)) {
-            if (isMusicVideo && streamRoot["data"]["url"].isString()) {
-                downloadUrl = streamRoot["data"]["url"].asString();
-                actualQuality = streamRoot["data"].get("r", actualQuality).asInt();
-            } else if (!isMusicVideo && streamRoot["urls"].isArray() &&
-                       !streamRoot["urls"].empty() && streamRoot["urls"][0]["url"].isString()) {
-                downloadUrl = streamRoot["urls"][0]["url"].asString();
-                actualQuality = streamRoot["urls"][0].get("r", actualQuality).asInt();
+            auto fetchStream = [&](bool mv, string& url, int& quality) -> bool {
+                const string streamApi = mv
+                    ? apiBase + "/mv/url?id=" + videoId + "&r=" + to_string(wantQuality)
+                    : apiBase + "/video/url?id=" + videoId + "&res=" + to_string(wantQuality);
+                string body = HttpGet(streamApi);
+                Json::Value root;
+                if (!Json::Reader().parse(body, root)) return false;
+                return mv ? ExtractMvDownloadUrl(root, url, quality)
+                          : ExtractVideoDownloadUrl(root, url, quality);
+            };
+
+            string downloadUrl;
+            int actualQuality = wantQuality;
+            if (!fetchStream(treatAsMv, downloadUrl, actualQuality)) {
+                const bool otherIsMv = !treatAsMv;
+                if (fetchStream(otherIsMv, downloadUrl, actualQuality)) {
+                    treatAsMv = otherIsMv;
+                    logTag = treatAsMv ? "[DL][MV] " : "[DL][VIDEO] ";
+                    WriteLog(logTag + "直链改走" + string(treatAsMv ? "MV" : "视频") + "接口，ID：" + videoId);
+                }
             }
-        }
-        if (downloadUrl.empty()) {
-            WriteLog(logTag + "[ERROR] 无法获取视频下载链接，ID：" + videoId);
-            return;
-        }
+            if (downloadUrl.empty()) {
+                WriteLog(logTag + "[ERROR] 无法获取视频下载链接，ID：" + videoId);
+                return;
+            }
 
-        string fileName = creator.empty() ? title + ".mp4" : creator + " - " + title + ".mp4";
-        const string illegal = "\\/:*?\"<>|";
-        for (char& c : fileName) if (illegal.find(c) != string::npos) c = '_';
-        CreateDirectoryW(Utf8ToWide(config.downloadPath).c_str(), nullptr);
-        const string fullPath = config.downloadPath + "\\" + fileName;
-        const std::wstring wPath = Utf8ToWide(fullPath);
+            string fileName = creator.empty() ? title + ".mp4" : creator + " - " + title + ".mp4";
+            const string illegal = "\\/:*?\"<>|";
+            for (char& c : fileName) if (illegal.find(c) != string::npos) c = '_';
+            CreateDirectoryW(Utf8ToWide(saveDir).c_str(), nullptr);
+            const string fullPath = saveDir + "\\" + fileName;
+            const std::wstring wPath = Utf8ToWide(fullPath);
 
-        CURL* curl = curl_easy_init();
-        if (!curl) {
-            WriteLog(logTag + "[ERROR] 无法创建下载任务");
-            return;
-        }
-        FILE* fp = _wfopen(wPath.c_str(), L"wb");
-        if (!fp) {
-            WriteLog(logTag + "[ERROR] 无法创建文件：" + fileName);
+            CURL* curl = curl_easy_init();
+            if (!curl) {
+                WriteLog(logTag + "[ERROR] 无法创建下载任务");
+                return;
+            }
+            FILE* fp = _wfopen(wPath.c_str(), L"wb");
+            if (!fp) {
+                WriteLog(logTag + "[ERROR] 无法创建文件：" + fileName);
+                curl_easy_cleanup(curl);
+                return;
+            }
+            WriteLog(logTag + "开始下载：" + fileName);
+            curl_easy_setopt(curl, CURLOPT_URL, downloadUrl.c_str());
+            curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
+            curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
+            curl_easy_setopt(curl, CURLOPT_USERAGENT, "Mozilla/5.0");
+            curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
+            curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
+            curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1L);          // 后台线程里避免 curl 超时信号把进程打死
+            curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, 30L);
+            curl_easy_setopt(curl, CURLOPT_LOW_SPEED_LIMIT, 1024L); // 持续低于 1KB/s
+            curl_easy_setopt(curl, CURLOPT_LOW_SPEED_TIME, 60L);    // 超过 60 秒视为卡死，结束任务
+            CURLcode code = curl_easy_perform(curl);
+            fclose(fp);
             curl_easy_cleanup(curl);
-            return;
+            if (code == CURLE_OK) {
+                WriteLog(logTag + "下载成功：" + fileName);
+            } else {
+                WriteLog(logTag + "[ERROR] 下载失败：" + string(curl_easy_strerror(code)) + "，文件：" + fileName);
+                DeleteFileW(wPath.c_str());
+            }
         }
-        WriteLog(logTag + "开始下载：" + fileName + "，清晰度 " + to_string(actualQuality) + "P");
-        curl_easy_setopt(curl, CURLOPT_URL, downloadUrl.c_str());
-        curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
-        curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
-        curl_easy_setopt(curl, CURLOPT_USERAGENT, "Mozilla/5.0");
-        CURLcode code = curl_easy_perform(curl);
-        fclose(fp);
-        curl_easy_cleanup(curl);
-        if (code == CURLE_OK)
-            WriteLog(logTag + "下载成功：" + fileName);
-        else
-            WriteLog(logTag + "[ERROR] 下载失败：" + string(curl_easy_strerror(code)) + "，文件：" + fileName);
+        catch (const std::exception& e) {
+            WriteLog(logTag + "[ERROR] 下载异常：" + string(e.what()) + "，ID：" + videoId);
+        }
+        catch (...) {
+            WriteLog(logTag + "[ERROR] 下载发生未知异常，ID：" + videoId);
+        }
     }).detach();
 }
 
 // 下载功能基准
-void CNeteaseCloud::DownloadSong(const string& sid, const string& artist, const string& title, bool isPodcast, const string& picUrl) {
-    // 这里的 sid 现在对于播客来说已经是 programId 了
-    std::thread([this, sid, artist, title, isPodcast, picUrl]() {
-        string logTag = isPodcast ? "[DL][PODCAST] " : "[DL][NORMAL] ";
-        string realAudioId = sid;
+void CNeteaseCloud::DownloadSong(const string& sid, bool isPodcast) {
+    const string apiBase = ApiBase;
+    const string saveDir = config.downloadPath;
+    const string quality = config.trackDownloadQuality;
+    const bool splitTitle = config.splitPodcastTitle;
+    const bool doWriteTags = config.writeTags;
+    std::thread([this, sid, isPodcast, apiBase, saveDir, quality, splitTitle, doWriteTags]() {
+        const string logTag = isPodcast ? "[DL][PODCAST] " : "[DL][NORMAL] ";
+        try {
+            if (shuttingDown.load()) return;
+            string title, artist, picUrl, realAudioId = sid;
 
-        // 如果是播客，需要先通过 programId 换取真正的音频流 ID
-        if (isPodcast) {
-            string res = HttpGet(ApiBase + "/dj/program/detail?id=" + sid);
-            Json::Value pRoot;
-            if (Json::Reader().parse(res, pRoot)) {
-                realAudioId = pRoot["program"]["mainSong"]["id"].asString();
-            }
-        }
-
-        // 获取直链
-        string res = HttpGet(ApiBase + "/song/url/v1?id=" + realAudioId + "&level=" + config.trackDownloadQuality);
-        Json::Value root;
-        if (!Json::Reader().parse(res, root) || root["data"].empty() || root["data"][0]["url"].isNull()) {
-            WriteLog(logTag + "[ERROR] 无法获取直链，音频 ID：" + realAudioId);
-            return;
-        }
-        string dUrl = root["data"][0]["url"].asString();
-
-        // 确定文件名和后缀
-        string ext = ".mp3";
-        if (!isPodcast && config.trackDownloadQuality == "lossless") {
-            ext = ".flac";
-        }
-
-        string fileName;
-        if (!artist.empty() && !title.empty()) {
-            // 这里统一采用 "作者 - 标题" 命名，如果是播客且触发了切分，此时 artist title 已是解析后的
-            fileName = artist + " - " + title + ext;
-        }
-        else {
-            fileName = sid + ext; // 兜底方案
-        }
-
-        // 过滤非法字符
-        const string illegal = "\\/:*?\"<>|";
-        for (char& c : fileName) if (illegal.find(c) != string::npos) c = '_';
-
-        // 执行下载
-        std::wstring wDownloadPath = Utf8ToWide(config.downloadPath);
-        CreateDirectoryW(wDownloadPath.c_str(), NULL);
-
-        string fullPath = config.downloadPath + "\\" + fileName;
-        std::wstring wPath = Utf8ToWide(fullPath);
-
-        CURL* curl = curl_easy_init();
-        if (curl) {
-            FILE* fp = _wfopen(wPath.c_str(), L"wb");
-            if (fp) {
-                WriteLog(logTag + "开始下载：" + fileName);
-
-                curl_easy_setopt(curl, CURLOPT_URL, dUrl.c_str());
-                curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
-                curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
-                curl_easy_setopt(curl, CURLOPT_USERAGENT, "Mozilla/5.0");
-
-                CURLcode code = curl_easy_perform(curl);
-                fclose(fp); // 必须先关闭文件，TagLib 才能接管写入
-
-                if (code == CURLE_OK) {
-                    WriteLog(logTag + "下载成功: " + fileName);
-
-                    // --- 写入 Tag 逻辑 ---
-                    if (config.writeTags) {
-                        WriteLog(logTag + "开始写入音频标签及详情页链接...");
-                        AddTags(fullPath, artist, title, sid, picUrl, isPodcast);
+            if (isPodcast) {
+                // 播客详情和音频 ID 都在后台取，避免右键时卡住界面
+                string res = HttpGet(apiBase + "/dj/program/detail?id=" + sid);
+                Json::Value pRoot;
+                if (!Json::Reader().parse(res, pRoot) || !pRoot["program"].isObject()) {
+                    WriteLog(logTag + "[ERROR] 播客节目解析失败，ID：" + sid);
+                    return;
+                }
+                const Json::Value& program = pRoot["program"];
+                string rawTitle = JsonStr(program, "name");
+                string rawArtist = JsonStr(program["dj"], "nickname");
+                if (splitTitle) {
+                    size_t pos = rawTitle.find(" - ");
+                    if (pos != string::npos) {
+                        artist = rawTitle.substr(0, pos);
+                        title = rawTitle.substr(pos + 3);
+                    } else {
+                        title = rawTitle;
+                        artist = rawArtist;
                     }
+                } else {
+                    title = rawTitle;
+                    artist = rawArtist;
                 }
-                else {
-                    WriteLog(logTag + "[ERROR] 下载失败：" + string(curl_easy_strerror(code)));
+                picUrl = PodcastCoverFromProgram(program);
+                realAudioId = JsonId(program["mainSong"], "id");
+                if (realAudioId.empty()) realAudioId = JsonId(program["mainSong"]["id"]);
+                WriteLog(logTag + "播客节目解析成功: " + artist + " - " + title);
+            } else {
+                string res = HttpGet(apiBase + "/song/detail?ids=" + sid);
+                Json::Value root;
+                if (!Json::Reader().parse(res, root) || !root["songs"].isArray() || root["songs"].empty()) {
+                    WriteLog(logTag + "[ERROR] 普通歌曲解析失败，ID：" + sid);
+                    return;
                 }
+                const Json::Value& song = root["songs"][0];
+                title = JsonStr(song, "name");
+                picUrl = JsonStr(song["al"], "picUrl");
+                artist = JoinNameList(song["ar"], "name", "name");
+                WriteLog(logTag + "普通歌曲解析成功: " + artist + " - " + title);
             }
-            else {
+
+            if (title.empty()) {
+                WriteLog(logTag + "[ERROR] 解析失败，无法开始任务。ID: " + sid);
+                return;
+            }
+            if (realAudioId.empty()) {
+                WriteLog(logTag + "[ERROR] 无法解析音频 ID，ID：" + sid);
+                return;
+            }
+
+            string res = HttpGet(apiBase + "/song/url/v1?id=" + realAudioId + "&level=" + quality);
+            Json::Value root;
+            if (!Json::Reader().parse(res, root) || !root["data"].isArray() || root["data"].empty()
+                || !root["data"][0]["url"].isString()) {
+                WriteLog(logTag + "[ERROR] 无法获取直链，音频 ID：" + realAudioId);
+                return;
+            }
+            string dUrl = root["data"][0]["url"].asString();
+            if (dUrl.empty()) {
+                WriteLog(logTag + "[ERROR] 无法获取直链，音频 ID：" + realAudioId);
+                return;
+            }
+
+            string ext = ".mp3";
+            if (!isPodcast && quality == "lossless") ext = ".flac";
+            string fileName = (!artist.empty() && !title.empty())
+                ? artist + " - " + title + ext
+                : sid + ext;
+            const string illegal = "\\/:*?\"<>|";
+            for (char& c : fileName) if (illegal.find(c) != string::npos) c = '_';
+
+            CreateDirectoryW(Utf8ToWide(saveDir).c_str(), nullptr);
+            string fullPath = saveDir + "\\" + fileName;
+            std::wstring wPath = Utf8ToWide(fullPath);
+
+            CURL* curl = curl_easy_init();
+            if (!curl) {
+                WriteLog(logTag + "[ERROR] 无法创建下载任务");
+                return;
+            }
+            FILE* fp = _wfopen(wPath.c_str(), L"wb");
+            if (!fp) {
                 WriteLog(logTag + "[ERROR] 无法打开文件：" + fileName);
+                curl_easy_cleanup(curl);
+                return;
             }
+            WriteLog(logTag + "开始下载：" + fileName);
+            curl_easy_setopt(curl, CURLOPT_URL, dUrl.c_str());
+            curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
+            curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
+            curl_easy_setopt(curl, CURLOPT_USERAGENT, "Mozilla/5.0");
+            curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
+            curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
+            curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1L);
+            curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, 30L);
+            curl_easy_setopt(curl, CURLOPT_LOW_SPEED_LIMIT, 1024L);
+            curl_easy_setopt(curl, CURLOPT_LOW_SPEED_TIME, 60L);
+            CURLcode code = curl_easy_perform(curl);
+            fclose(fp);
             curl_easy_cleanup(curl);
+
+            if (code == CURLE_OK) {
+                WriteLog(logTag + "下载成功: " + fileName);
+                if (doWriteTags) {
+                    WriteLog(logTag + "开始写入音频标签及详情页链接...");
+                    AddTags(fullPath, artist, title, sid, picUrl, isPodcast);
+                }
+            } else {
+                WriteLog(logTag + "[ERROR] 下载失败：" + string(curl_easy_strerror(code)));
+                DeleteFileW(wPath.c_str());
+            }
         }
-        }).detach();
+        catch (const std::exception& e) {
+            WriteLog(logTag + "[ERROR] 下载异常：" + string(e.what()) + "，ID：" + sid);
+        }
+        catch (...) {
+            WriteLog(logTag + "[ERROR] 下载发生未知异常，ID：" + sid);
+        }
+    }).detach();
 }
 
 
@@ -1791,6 +1853,11 @@ void CNeteaseCloud::DownloadSong(const string& sid, const string& artist, const 
 
 void CNeteaseCloud::AddTags(const string& filePath, const string& artist, const string& title, const string& sid, const string& picUrl, bool isPodcast) {
     std::wstring wPath = Utf8ToWide(filePath);
+    auto fetchCover = [this](const string& url) -> string {
+        if (url.empty()) return {};
+        // 封面可能比普通 API 大，给 30 秒；失败只影响封面，不回滚已下好的音频
+        return HttpGet(url, false, 30);
+    };
 
     // --- 情况 A: 处理 MP3 ---
     if (filePath.find(".mp3") != string::npos) {
@@ -1811,7 +1878,7 @@ void CNeteaseCloud::AddTags(const string& filePath, const string& artist, const 
 
             // 2. 写入封面
             if (!picUrl.empty()) {
-                string imgData = HttpGet(picUrl);
+                string imgData = fetchCover(picUrl);
                 if (!imgData.empty()) {
                     TagLib::ByteVector bv(imgData.data(), (unsigned int)imgData.size());
 
@@ -1850,7 +1917,7 @@ void CNeteaseCloud::AddTags(const string& filePath, const string& artist, const 
 
         // 2. 写入封面
         if (!picUrl.empty()) {
-            string imgData = HttpGet(picUrl);
+            string imgData = fetchCover(picUrl);
             if (!imgData.empty()) {
                 TagLib::ByteVector bv(imgData.data(), (unsigned int)imgData.size());
                 flacFile.removePictures(); // 清理旧图片

@@ -123,7 +123,7 @@ private:
     void WriteLog(const string& text);
     string UrlEncode(const string& value);
     bool HandleSearchLink(const string& text, IVdjTracksList* tracksList, int wanted, int& added);
-    void DownloadSong(const string& sid, const string& artist, const string& title, bool isPodcast, const string& picUrl);
+    void DownloadSong(const string& sid, bool isPodcast);
     void DownloadVideo(const string& videoId, bool isMusicVideo);
     std::wstring Utf8ToWide(const std::string& str);
     string WideToUtf8(const std::wstring& str);
