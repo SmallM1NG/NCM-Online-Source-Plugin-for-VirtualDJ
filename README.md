@@ -32,8 +32,6 @@
 	·
 	<a href="docs/md/FAQ.md">FAQ</a>
 	·
-	<a href="docs/md/HOW-IT-WORKS.md">如何工作</a>
-	·
 	<a href="docs/md/DEVELOPMENT.md">开发相关</a>
 </p>
 
@@ -185,6 +183,17 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 </li>
 <li>
 
+你可以在左侧点击 `NeteaseCloudMusic` 展开列表，即可看到配置好的歌单；选择指定歌单，等待一会即可看到歌单内的内容
+
+<p align="center">
+	<img width="1024" src="docs/imgs/usage-playlists.png" alt="展开歌单列表">
+</p>
+
+> 如果曲目排序不对，请点击浏览窗列表表头左上角空白区域，确认是按照这个地方排序（有箭头提示），然后点击 `NeteaseCloudMusic` 折叠列表再重新展开即可。请不要使用别的排序方式，这样会打乱列表顺序
+
+</li>
+<li>
+
 可以按需调整插件设置内的配置项，配置均为 **实时生效**
 
 > 变更 **内容 / 数量** 部分配置后，请点击 `NeteaseCloudMusic` 项折叠再展开，即可触发列表刷新
@@ -259,8 +268,6 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 	<a href="docs/md/SETTINGS.md">配置项详细说明</a>
 	·
 	<a href="docs/md/FAQ.md">FAQ</a>
-	·
-	<a href="docs/md/HOW-IT-WORKS.md">如何工作</a>
 	·
 	<a href="docs/md/DEVELOPMENT.md">开发相关</a>
 </p>
