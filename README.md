@@ -1,5 +1,5 @@
 <p align="center">
-	<img width="72%" alt="NCM OSP" src="docs/imgs/title.png">
+	<img width="72%" alt="NCM OSP" src="Docs/imgs/title.png">
 </p>
 
 <p align="center">
@@ -28,11 +28,11 @@
 </p>
 
 <p align="center">
-	<a href="docs/md/SETTINGS.md">配置项详细说明</a>
+	<a href="Docs/md/SETTINGS.md">配置项详细说明</a>
 	·
-	<a href="docs/md/FAQ.md">FAQ</a>
+	<a href="Docs/md/FAQ.md">FAQ</a>
 	·
-	<a href="docs/md/DEVELOPMENT.md">开发相关</a>
+	<a href="Docs/md/DEVELOPMENT.md">开发相关</a>
 </p>
 
 ---
@@ -62,37 +62,37 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 ### 在线播放音频 / 视频
 
 <div align="center">
-	<img width="1024" src="docs/imgs/play.webp" alt="在线播放音频 / 视频">
+	<img width="1024" src="Docs/imgs/play.webp" alt="在线播放音频 / 视频">
 </div>
 
 ### 歌单以列表展示
 
 <div align="center">
-	<img width="1024" src="docs/imgs/playlists.webp" alt="歌单以列表展示">
+	<img width="1024" src="Docs/imgs/playlists.webp" alt="歌单以列表展示">
 </div>
 
 ### 手动搜索
 
 <div align="center">
-	<img width="1024" src="docs/imgs/search.webp" alt="手动搜索">
+	<img width="1024" src="Docs/imgs/search.webp" alt="手动搜索">
 </div>
 
 ### AI 推荐等功能调用
 
 <div align="center">
-	<img width="1024" src="docs/imgs/ai-recommend.webp" alt="AI 推荐等功能调用">
+	<img width="1024" src="Docs/imgs/ai-recommend.webp" alt="AI 推荐等功能调用">
 </div>
 
 ### 下载音频 / 视频
 
 <div align="center">
-	<img width="1024" src="docs/imgs/download.webp" alt="下载音频 / 视频">
+	<img width="1024" src="Docs/imgs/download.webp" alt="下载音频 / 视频">
 </div>
 
 ### 设置面板
 
 <div align="center">
-	<img width="1024" src="docs/imgs/settings.webp" alt="设置面板">
+	<img width="1024" src="Docs/imgs/settings.webp" alt="设置面板">
 </div>
 
 ---
@@ -114,7 +114,7 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 完全解压压缩包内的内容，应包含一个 **exe** 和一个 **dll** 文件
 
 <p align="center">
-	<img width="242" src="docs/imgs/install-files.png" alt="解压后的 exe 与 dll">
+	<img width="242" src="Docs/imgs/install-files.png" alt="解压后的 exe 与 dll">
 </p>
 
 </li>
@@ -127,7 +127,7 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 如果你更改了数据目录，请放入你自定义的数据目录内
 
 <p align="center">
-	<img width="903" src="docs/imgs/install-folder.png" alt="放入 OnlineSources 文件夹">
+	<img width="903" src="Docs/imgs/install-folder.png" alt="放入 OnlineSources 文件夹">
 </p>
 
 </li>
@@ -136,7 +136,7 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 启动 VirtualDJ，在浏览窗左侧列表区域找到 **网络曲库**，即可看到 `NeteaseCloudMusic` 字样，则为安装成功
 
 <p align="center">
-	<img width="1024" src="docs/imgs/install-success.png" alt="安装成功后出现 NeteaseCloudMusic">
+	<img width="1024" src="Docs/imgs/install-success.png" alt="安装成功后出现 NeteaseCloudMusic">
 </p>
 
 </li>
@@ -153,7 +153,7 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 启动 VirtualDJ，在 **网络曲库** 中找到 `NeteaseCloudMusic` 项，右键点击，选择 **打开插件设置**
 
 <p align="center">
-	<img width="723" src="docs/imgs/usage-open-settings.png" alt="右键打开插件设置">
+	<img width="723" src="Docs/imgs/usage-open-settings.png" alt="右键打开插件设置">
 </p>
 
 </li>
@@ -162,11 +162,11 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 在顶部找到 **账户** 部分，点击 **登录**，在浏览器弹出的页面中使用网易云 App 扫码登录
 
 <p align="center">
-	<img width="687" src="docs/imgs/usage-login.png" alt="点击登录">
+	<img width="687" src="Docs/imgs/usage-login.png" alt="点击登录">
 </p>
 
 <p align="center">
-	<img width="480" src="docs/imgs/usage-qr.png" alt="浏览器扫码登录">
+	<img width="480" src="Docs/imgs/usage-qr.png" alt="浏览器扫码登录">
 </p>
 
 </li>
@@ -175,7 +175,7 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 登录完成后关闭浏览器，可以在插件设置中看到所登录账户的信息，即为登录成功，即可开始使用
 
 <p align="center">
-	<img width="730" src="docs/imgs/usage-logged-in.png" alt="登录成功后的账户信息">
+	<img width="730" src="Docs/imgs/usage-logged-in.png" alt="登录成功后的账户信息">
 </p>
 
 > 无需每次使用均重新登录账号。如果出现获取不到高音质 / 完整内容等问题，则为凭据过期，此时再退出登录、重新扫码登录即可恢复
@@ -186,7 +186,7 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 你可以在左侧点击 `NeteaseCloudMusic` 展开列表，即可看到配置好的歌单；选择指定歌单，等待一会即可看到歌单内的内容。如果曲目排序不对，请点击浏览窗列表表头左上角空白区域，确认是按照这个地方排序（有箭头提示），然后点击 `NeteaseCloudMusic` 折叠列表再重新展开即可。请不要使用别的排序方式，这样会打乱列表顺序
 
 <p align="center">
-	<img width="1024" src="docs/imgs/usage-playlists.png" alt="展开歌单列表">
+	<img width="1024" src="Docs/imgs/usage-playlists.png" alt="展开歌单列表">
 </p>
 
 </li>
@@ -202,7 +202,7 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 点击浏览窗上方输入框附近的 **小齿轮**，按图中指示配置，即可使用搜索功能
 
 <p align="center">
-	<img width="1024" src="docs/imgs/usage-search-gear.png" alt="配置搜索功能">
+	<img width="1024" src="Docs/imgs/usage-search-gear.png" alt="配置搜索功能">
 </p>
 
 </li>
@@ -211,7 +211,7 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 左键点击浏览窗列表选中 `NeteaseCloudMusic` 项，在输入框中填写搜索关键词后按下回车即可，支持 **中文搜索**
 
 <p align="center">
-	<img width="1024" src="docs/imgs/usage-search.png" alt="选中后搜索">
+	<img width="1024" src="Docs/imgs/usage-search.png" alt="选中后搜索">
 </p>
 
 > 可以在插件设置中选择搜索返回的类型，但只能同时选择一个
@@ -236,7 +236,7 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 插件设置中启用下载功能后，右键曲目 / 视频即可看到对应下载选项，点击即可下载到设置中指定的路径
 
 <p align="center">
-	<img width="1024" src="docs/imgs/usage-download.png" alt="右键下载曲目或视频">
+	<img width="1024" src="Docs/imgs/usage-download.png" alt="右键下载曲目或视频">
 </p>
 
 > 选择的音质 / 分辨率均为可获得的上限，如没有则会自动降级返回
@@ -249,7 +249,7 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 如遇到无法获取内容、登录页显示不出来等情况，请检查插件设置下方的 **API 服务状态** 是否在线。如不在线请尝试 **重启 API**，如无法启动请尝试更换端口
 
 <p align="center">
-	<img width="592" src="docs/imgs/usage-api-status.png" alt="API 服务状态与重启">
+	<img width="592" src="Docs/imgs/usage-api-status.png" alt="API 服务状态与重启">
 </p>
 
 > 变更 API 相关配置需 **重启生效**
@@ -263,11 +263,11 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 ## 其他内容 📚
 
 <p align="center">
-	<a href="docs/md/SETTINGS.md">配置项详细说明</a>
+	<a href="Docs/md/SETTINGS.md">配置项详细说明</a>
 	·
-	<a href="docs/md/FAQ.md">FAQ</a>
+	<a href="Docs/md/FAQ.md">FAQ</a>
 	·
-	<a href="docs/md/DEVELOPMENT.md">开发相关</a>
+	<a href="Docs/md/DEVELOPMENT.md">开发相关</a>
 </p>
 
 ---
@@ -318,9 +318,9 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 </p>
 
 <p align="center">
-	<img width="420" src="docs/imgs/qrcode.jpg" alt="请我喝奶茶">
+	<img width="420" src="Docs/imgs/qrcode.jpg" alt="请我喝奶茶">
 </p>
 
 <p align="center">
-	<small><font color="#ff69b4">哇 你居然看到这里了喵 感谢你看完我辛苦写的 README 喵 偷偷给你发一个小<a href="docs/skins">彩蛋</a>喵 😋</font></small>
+	<small><font color="#ff69b4">哇 你居然看到这里了喵 感谢你看完我辛苦写的 README 喵 偷偷给你发一个小<a href="Docs/skins">彩蛋</a>喵 😋</font></small>
 </p>
