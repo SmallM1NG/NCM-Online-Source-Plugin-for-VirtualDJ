@@ -28,11 +28,11 @@
 </p>
 
 <p align="center">
-	<a href="Docs/md/SETTINGS.md">配置项详细说明</a>
+	<a href="Docs/mds/SETTINGS.md">配置项详细说明</a>
 	·
-	<a href="Docs/md/FAQ.md">FAQ</a>
+	<a href="Docs/mds/FAQ.md">FAQ</a>
 	·
-	<a href="Docs/md/DEVELOPMENT.md">开发相关</a>
+	<a href="Docs/mds/DEVELOPMENT.md">开发相关</a>
 </p>
 
 ---
@@ -263,11 +263,11 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 ## 其他内容 📚
 
 <p align="center">
-	<a href="Docs/md/SETTINGS.md">配置项详细说明</a>
+	<a href="Docs/mds/SETTINGS.md">配置项详细说明</a>
 	·
-	<a href="Docs/md/FAQ.md">FAQ</a>
+	<a href="Docs/mds/FAQ.md">FAQ</a>
 	·
-	<a href="Docs/md/DEVELOPMENT.md">开发相关</a>
+	<a href="Docs/mds/DEVELOPMENT.md">开发相关</a>
 </p>
 
 ---
