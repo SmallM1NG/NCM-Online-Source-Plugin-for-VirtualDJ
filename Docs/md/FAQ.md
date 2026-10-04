@@ -4,7 +4,7 @@
 
 &emsp;**A:** 本插件仅支持 **Windows x64** 的 **VirtualDJ 2021 及以上版本**，需拥有 **VirtualDJ Pro** 许可证才可使用（这是 VirtualDJ 的硬性要求）
 
-&emsp;请确认文件放在数据目录的 `Plugins64\OnlineSources` 里，且能看到 `NeteaseCloudMusic.dll` 和 `ncm_api_server.exe`。2025 之前和之后的数据目录不一样，改过自定义目录的请放到你自己的目录里。
+&emsp;请确认文件放在数据目录的 `Plugins64\OnlineSources` 里，且能看到 `NeteaseCloudMusic.dll` 和 `ncm_api_server.exe`。2023 之前和之后的数据目录不一样，改过自定义目录的请放到你自己的目录里。
 
 **2.** <b style="font-size: 1.15em">Q:</b> <b style="font-size: 1.15em">获取不到指定音质？</b>
 

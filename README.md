@@ -122,8 +122,8 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 
 将两个文件放入 VirtualDJ 数据目录的 **OnlineSources** 文件夹中
 
-2025 之前的版本，通常在 `C:\Users\用户名\Documents\VirtualDJ\Plugins64\OnlineSources`  
-2025 之后的版本，通常在 `C:\Users\用户名\AppData\Local\VirtualDJ\Plugins64\OnlineSources`  
+2023 之前的版本，通常在 `C:\Users\用户名\Documents\VirtualDJ\Plugins64\OnlineSources`  
+2023 之后的版本，通常在 `C:\Users\用户名\AppData\Local\VirtualDJ\Plugins64\OnlineSources`  
 如果你更改了数据目录，请放入你自定义的数据目录内
 
 <p align="center">
