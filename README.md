@@ -100,7 +100,7 @@ NCM OSP 是一款可以让 **VirtualDJ** 使用 **网易云音乐** 作为 **Onl
 <a id="如何安装"></a>
 ## 如何安装 📥
 
-本插件仅支持 **Windows x64** 版本的 **VirtualDJ 2021 及以上版本**，需拥有 **VirtualDJ Pro** 许可证才可使用（这是 VirtualDJ 的硬性要求）  
+本插件仅支持 **Windows x64** 的 **VirtualDJ 2021 及以上版本**，需拥有 **VirtualDJ Pro** 许可证才可使用（这是 VirtualDJ 的硬性要求）  
 获取对应音质 / 内容时需拥有网易云对应等级的 **VIP**，本插件不提供任何免费获取或绕过途径
 
 <ol>
