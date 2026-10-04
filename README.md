@@ -10,7 +10,7 @@
 	<a href="https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ?color=brightgreen&label=Latest&style=for-the-badge"></a>
 	<img alt="C++20" src="https://img.shields.io/badge/C%2B%2B-20-00599C.svg?logo=cplusplus&logoColor=white&style=for-the-badge">
 	<img alt="Windows x64" src="https://img.shields.io/badge/Windows-x64-0078D6.svg?logo=windows&logoColor=white&style=for-the-badge">
-	<img alt="VirtualDJ Pro" src="https://img.shields.io/badge/VirtualDJ-Pro-FF6A00.svg?style=for-the-badge">
+	<img alt="VirtualDJ 8" src="https://img.shields.io/badge/VirtualDJ-8-E60000.svg?style=for-the-badge">
 	<a href="LICENSE"><img alt="License: GPLv3" src="https://img.shields.io/badge/License-GPLv3-red.svg?style=for-the-badge"></a>
 	<a href="https://github.com/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/SmallM1NG/NCM-Online-Source-Plugin-for-VirtualDJ?style=for-the-badge"></a>
 </p>
